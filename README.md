@@ -1,5 +1,12 @@
 # phased_array_buzzer
-蜂鸣器相控阵
+蜂鸣器相控阵。硬件基于ST-Nucleo-F767ZI开发板，软件基于mbed，开发环境：Visual Studio 2017 + VisualGDB
+
+## 如何开始？
+
+- 项目基于VisualGDB，其建立的工程不包括mbed文件（默认位于C:\Users\Username\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed文件夹下）
+- 安装Visual Studio 2017和VisualGDB最新版
+- 使用VisualGDB下载最新的mbed包
+- 打开项目，编译工程
 
 ## 硬件
 
@@ -25,7 +32,7 @@
 	- 正弦波相位的调节基于对RAM中数组的更改
 	- 一个pwm dac数组的大小？
 - 阵列
-	- 4~10个，频率2~4kHz赫兹
+	- 4-10个，频率2-4kHz赫兹
 	- 间距最多340/4k/2=0.0425m
 	- 长度0.0425*10=0.425m
 	- 各蜂鸣器，运放，滤波器模块相互独立
@@ -34,6 +41,7 @@
 - 清单：lm386，长排针，混合排针座（用于制作叠层模块），超声波喇叭，无源蜂鸣器，双绞线（或用现成的舵机线？）
 
 ## 软件
+
 - 先实现方波驱动，dma + io翻转
 	- 数组存储io口一个方波周期内的状态
 	- 可以通过数组调整相位和占空比
