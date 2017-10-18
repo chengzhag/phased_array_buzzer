@@ -1,6 +1,7 @@
 #pragma once
 #include "mbed.h"
 #include <array>
+#include <algorithm>
 
 #include "PeriodicSignal.h"
 #include "Frqer.h"
@@ -33,10 +34,9 @@ namespace sky
 
 	//周期控制pwm占空比类组
 	template<size_t ArraySize, size_t BufferSize>
-	class PwmPeriodArray
+	class PwmPeriodArray:protected array<PwmPeriod<BufferSize>, ArraySize>
 	{
 	protected:
-		array<PwmPeriod<BufferSize>, ArraySize> pwms;
 
 		//设置更新速率开始输出
 		virtual void begin(float rate) = 0;
@@ -46,7 +46,7 @@ namespace sky
 			array<PwmPeriod<BufferSize>, ArraySize> pwmPeriods,
 			float frq = 500e3f
 		) :
-			pwms(pwmPeriods)
+			array<PwmPeriod<BufferSize>, ArraySize>(pwmPeriods)
 		{
 			setFrq(frq);
 		}
@@ -54,10 +54,11 @@ namespace sky
 		//设置pwm频率
 		void setFrq(float frq)
 		{
-			for (auto p : pwms)
-			{
-				p.setFrq(frq);
-			}
+			for_each(
+				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
+				array<PwmPeriod<BufferSize>, ArraySize>::end(),
+				[frq](PwmPeriod<BufferSize> p) {p.setFrq(frq); }
+			);
 		}
 
 		
@@ -86,8 +87,11 @@ namespace sky
 		{
 			if (i == BufferSize)
 				i = 0;
-			for (auto &p : PwmPeriodArray<ArraySize, BufferSize>::pwms)
-				p.pwm.write(p.buf[i]);
+			for_each(
+				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
+				array<PwmPeriod<BufferSize>, ArraySize>::end(),
+				[this](PwmPeriod<BufferSize> p) {p.pwm.write(p.buf[this->i]); }
+			);
 			i++;
 			rate = frqer.frq();
 		}
