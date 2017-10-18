@@ -47,7 +47,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeIncludeSearchPath>$(BSP_ROOT);$(BSP_ROOT)\cmsis;$(BSP_ROOT)\cmsis\TOOLCHAIN_GCC;$(BSP_ROOT)\DeviceDefinitions;$(BSP_ROOT)\drivers;$(BSP_ROOT)\hal;$(BSP_ROOT)\hal\storage_abstraction;$(BSP_ROOT)\platform;$(BSP_ROOT)\targets;$(BSP_ROOT)\targets\TARGET_STM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\arm-eabi\thumb\cortex_m7;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\backward;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include-fixed;$(TOOLCHAIN_ROOT)\arm-eabi\sys-include;$(TOOLCHAIN_ROOT)\arm-eabi\include;$(BSP_ROOT)\rtos;$(BSP_ROOT)\rtos\rtx;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(BSP_ROOT);$(BSP_ROOT)\cmsis;$(BSP_ROOT)\cmsis\TOOLCHAIN_GCC;$(BSP_ROOT)\DeviceDefinitions;$(BSP_ROOT)\drivers;$(BSP_ROOT)\hal;$(BSP_ROOT)\hal\storage_abstraction;$(BSP_ROOT)\platform;$(BSP_ROOT)\targets;$(BSP_ROOT)\targets\TARGET_STM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI;$(BSP_ROOT)\rtos;$(BSP_ROOT)\rtos\rtx;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\arm-eabi\thumb\cortex_m7;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\backward;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include-fixed;$(TOOLCHAIN_ROOT)\arm-eabi\sys-include;$(TOOLCHAIN_ROOT)\arm-eabi\include;myDrivers;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
     <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
     <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
     <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
@@ -80,6 +80,11 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClInclude Include="myDrivers\Frqer.h" />
+    <ClInclude Include="myDrivers\myDrivers.h" />
+    <ClInclude Include="myDrivers\PeriodicSignal.h" />
+    <ClInclude Include="myDrivers\PwmPeriod.h" />
+    <ClInclude Include="myDrivers\TicToc.h" />
     <None Include="mbed.mak" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_gpio.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_lp_ticker_api.c" />

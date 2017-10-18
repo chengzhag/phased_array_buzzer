@@ -628,6 +628,9 @@
 #ifndef __MBED_CMSIS_RTOS_CM
 #define __MBED_CMSIS_RTOS_CM 1
 #endif
+#ifndef MBED_CONF_RTOS_PRESENT
+#define MBED_CONF_RTOS_PRESENT 1
+#endif
 #ifndef __REGISTER_PREFIX__
 #define __REGISTER_PREFIX__ 
 #endif
@@ -753,6 +756,9 @@
 #endif
 #ifndef __UDQ_FBIT__
 #define __UDQ_FBIT__ 64
+#endif
+#ifndef DEBUG
+#define DEBUG 1
 #endif
 #ifndef __INT8_TYPE__
 #define __INT8_TYPE__ signed char
@@ -1324,12 +1330,6 @@
 #ifndef __ATOMIC_RELEASE
 #define __ATOMIC_RELEASE 3
 #endif
-#ifndef DEBUG
-#define DEBUG 1
-#endif
-#ifndef MBED_CONF_RTOS_PRESENT
-#define MBED_CONF_RTOS_PRESENT 1
-#endif
 #endif
 
 // --- Include directories begin --- //
@@ -1350,6 +1350,11 @@
 //$(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/device
 //$(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/device/TOOLCHAIN_GCC_ARM
 //$(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/TARGET_NUCLEO_F767ZI
+//$(BSP_ROOT)/rtos
+//$(BSP_ROOT)/rtos/rtx
+//$(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M
+//$(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7
+//$(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC
 //$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0
 //$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\arm-eabi\thumb\cortex_m7
 //$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\backward
@@ -1357,11 +1362,7 @@
 //$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include-fixed
 //$(TOOLCHAIN_ROOT)\arm-eabi\sys-include
 //$(TOOLCHAIN_ROOT)\arm-eabi\include
-//$(BSP_ROOT)/rtos
-//$(BSP_ROOT)/rtos/rtx
-//$(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M
-//$(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7
-//$(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC
+//myDrivers
 // --- Include directories end --- //
 
 

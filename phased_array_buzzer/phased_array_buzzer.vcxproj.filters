@@ -31,6 +31,9 @@
     <Filter Include="VisualGDB settings">
       <UniqueIdentifier>{5929d88d-323b-46be-859a-36d540e60535}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header files\myDrivers">
+      <UniqueIdentifier>{fac1dc19-4511-470e-9e5d-48fe6e1f96e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
@@ -1388,5 +1391,22 @@
     <ClCompile Include="main.cpp">
       <Filter>Source files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myDrivers\myDrivers.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PeriodicSignal.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PwmPeriod.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\Frqer.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\TicToc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
