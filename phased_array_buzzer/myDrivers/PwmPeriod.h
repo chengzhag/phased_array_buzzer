@@ -10,16 +10,16 @@ namespace sky
 {
 	//通过函数直接周期改变pwm占空比
 	template<size_t N>
-	class PwmPeriod
+	class PwmPeriod :public array<float, N>
 	{
 	protected:
-	public:
 		PwmOut pwm;
-		array<float, N> buf;
+	public:
+		
 
 		PwmPeriod(PinName pin, float frq = 500e3f, array<float, N> buf = { 0 }) :
 			pwm(pin),
-			buf(buf)
+			array<float, N>(buf)
 		{
 			pwm.write(0);
 			setFrq(frq);
@@ -30,16 +30,22 @@ namespace sky
 		{
 			pwm.period(1 / frq);
 		}
+
+		//设置pwm占空比
+		void setDuty(float duty)
+		{
+			pwm.write(duty);
+		}
 	};
 
 	//周期控制pwm占空比类组
 	template<size_t ArraySize, size_t BufferSize>
-	class PwmPeriodArray:protected array<PwmPeriod<BufferSize>, ArraySize>
+	class PwmPeriodArray:public array<PwmPeriod<BufferSize>, ArraySize>
 	{
 	protected:
 
 		//设置更新速率开始输出
-		virtual void begin(float rate) = 0;
+		virtual void init(float rate) = 0;
 
 	public:
 		PwmPeriodArray(
@@ -74,7 +80,7 @@ namespace sky
 		size_t i = 0;
 
 		//绑定定时器开始输出
-		void begin(float rate)
+		void init(float rate)
 		{
 			ticker.attach(
 				callback(this, &PwmPeriodDirectArray<ArraySize, BufferSize>::refresh),
@@ -90,7 +96,7 @@ namespace sky
 			for_each(
 				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
 				array<PwmPeriod<BufferSize>, ArraySize>::end(),
-				[this](PwmPeriod<BufferSize> p) {p.pwm.write(p.buf[this->i]); }
+				[this](PwmPeriod<BufferSize> p) {p.setDuty(p[this->i]); }
 			);
 			i++;
 			rate = frqer.frq();
@@ -107,7 +113,7 @@ namespace sky
 				frq
 				)
 		{
-			begin(rate);
+			init(rate);
 		}
 
 		//获取实际刷新速率

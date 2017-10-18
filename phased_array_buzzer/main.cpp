@@ -34,10 +34,26 @@ static void ThreadBody(const void *)
 	}
 }
 
+void setup()
+{
+	for (auto &p : pwmPeriodArray)
+	{
+		sinPeriod(
+			p.begin(),
+			p.end(),
+			1,
+			0.5,
+			0
+		);
+	}
+
+	Thread thread(ThreadBody);
+}
+
 int main()
 {
-	Thread thread(ThreadBody);
-
+	setup();
+	
 	for (;;)
 	{
 		g_LED2 = !g_LED2;
