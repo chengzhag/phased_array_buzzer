@@ -8,18 +8,19 @@ DigitalOut g_LED1(LED1);
 DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
-PwmPeriodArray<8, 10> pwmPeriodArray(
+PwmPeriodDirectArray<8, 10> pwmPeriodArray(
 {
-PwmPeriodTicker<10>(PE_9,{ 0 }),
-PwmPeriodTicker<10>(PE_11,{ 0 }),
-PwmPeriodTicker<10>(PE_13,{ 0 }),
-PwmPeriodTicker<10>(PE_14,{ 0 }),
-PwmPeriodTicker<10>(PA_5,{ 0 }),
-PwmPeriodTicker<10>(PB_15,{ 0 }),
-PwmPeriodTicker<10>(PB_10,{ 0 }),
-PwmPeriodTicker<10>(PB_11,{ 0 }),
+PwmPeriod<10>(PE_9),
+PwmPeriod<10>(PE_11),
+PwmPeriod<10>(PE_13),
+PwmPeriod<10>(PE_14),
+PwmPeriod<10>(PA_5),
+PwmPeriod<10>(PB_15),
+PwmPeriod<10>(PB_10),
+PwmPeriod<10>(PB_11),
 },
-20000
+500e3f,
+20e3f
 );
 
 
@@ -28,7 +29,7 @@ static void ThreadBody(const void *)
 	for (;;)
 	{
 		g_LED1 = !g_LED1;
-		pc.printf("%f\r\n", pwmPeriodArray.rate());
+		pc.printf("%f\r\n", pwmPeriodArray.getRate());
 		Thread::wait(500);
 	}
 }
