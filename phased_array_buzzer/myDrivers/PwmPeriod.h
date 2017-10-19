@@ -64,7 +64,6 @@ namespace sky
 			);
 		}
 
-		
 	};
 
 	template<size_t ArraySize, size_t BufferSize>
@@ -125,13 +124,53 @@ namespace sky
 	class BuzzerArray
 	{
 	protected:
+		PwmPeriodArray< ArraySize, BufferSize> *pwms;
+		array<float, ArraySize> p2ps = { 0 }, phases = { 0 };
+
+		//从p2ps和phases数组刷新pwms的buf
+		void refreshBufs()
+		{
+			size_t i = 0;
+			for (auto &p : *pwms)
+			{
+				sinPeriod(p.begin(), p.end(), p2ps[i], 0.5, phases[i]);
+				i++;
+			}
+		}
 	public:
 		BuzzerArray(
-
-		) 
+			PwmPeriodArray< ArraySize, BufferSize> &pwms
+		) :
+			pwms(&pwms)
 		{
-		
+			
 		}
+
+		//根据输入的p2ps数组刷新pwms的峰峰值
+		void setP2ps(array<float, ArraySize> p2ps)
+		{
+			this->p2ps = p2ps;
+			refreshBufs();
+		}
+
+		//根据输入的phases数组刷新pwms的相位
+		void setPhases(array<float, ArraySize> phases)
+		{
+			this->phases = phases;
+			refreshBufs();
+		}
+
+		//根据输入的p2ps和phases数组刷新pwms的峰峰值和相位
+		void setSins(
+			array<float, ArraySize> p2ps,
+			array<float, ArraySize> phases
+		)
+		{
+			this->p2ps = p2ps,
+			this->phases = phases;
+			refreshBufs();
+		}
+
 	};
 
 
