@@ -8,14 +8,9 @@ Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
 PwmPeriodDirectArray<8, 10> pwmPeriodArray(
 {
-	PwmPeriod<10>(PE_9),
-	PwmPeriod<10>(PE_11),
-	PwmPeriod<10>(PE_13),
-	PwmPeriod<10>(PE_14),
-	PwmPeriod<10>(PA_5),
-	PwmPeriod<10>(PB_15),
-	PwmPeriod<10>(PB_10),
-	PwmPeriod<10>(PB_11),
+	PwmPeriod<10>(PE_9),PwmPeriod<10>(PE_11),PwmPeriod<10>(PE_13),
+	PwmPeriod<10>(PE_14),PwmPeriod<10>(PA_5),PwmPeriod<10>(PB_15),
+	PwmPeriod<10>(PB_10),PwmPeriod<10>(PB_11),
 },
 500e3f,
 20e3f

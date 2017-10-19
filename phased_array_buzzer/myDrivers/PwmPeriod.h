@@ -64,6 +64,8 @@ namespace sky
 			);
 		}
 
+		//设置刷新速率
+		virtual void setRate(float rate) = 0;
 	};
 
 	template<size_t ArraySize, size_t BufferSize>
@@ -112,8 +114,15 @@ namespace sky
 			init(rate);
 		}
 
+		//设置刷新速率
+		void setRate(float rate)
+		{
+			ticker.detach();
+			init(rate);
+		}
+
 		//获取实际刷新速率
-		float getRate()
+		auto getRate()
 		{
 			return rate;
 		}
@@ -171,6 +180,17 @@ namespace sky
 			refreshBufs();
 		}
 
+		//设置pwm频率
+		void setFrq(float frq)
+		{
+			pwms->setFrq(frq);
+		}
+
+		//设置刷新速率
+		void setRate(float rate)
+		{
+			pwms->setRate(rate);
+		}
 	};
 
 
