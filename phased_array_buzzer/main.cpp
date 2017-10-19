@@ -33,6 +33,10 @@ static void ThreadBody(const void *)
 void setup()
 {
 	buzzerArray.setSins({ 1 }, { 0 });
+	for (auto& p: pwmPeriodArray)
+	{
+		triPeriod(p.begin(), p.end(), 0, 1, 0);
+	}
 }
 
 int main()

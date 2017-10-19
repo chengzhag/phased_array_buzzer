@@ -94,7 +94,7 @@ namespace sky
 			for_each(
 				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
 				array<PwmPeriod<BufferSize>, ArraySize>::end(),
-				[this](PwmPeriod<BufferSize> p) {p.setDuty(p[this->i]); }
+				[this](auto &p) {p.setDuty(p[this->i]); }
 			);
 			i++;
 			rate = frqer.frq();
