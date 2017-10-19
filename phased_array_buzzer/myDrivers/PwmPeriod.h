@@ -15,8 +15,6 @@ namespace sky
 	protected:
 		PwmOut pwm;
 	public:
-		
-
 		PwmPeriod(PinName pin, float frq = 500e3f, array<float, N> buf = { 0 }) :
 			pwm(pin),
 			array<float, N>(buf)
@@ -43,7 +41,6 @@ namespace sky
 	class PwmPeriodArray:public array<PwmPeriod<BufferSize>, ArraySize>
 	{
 	protected:
-
 		//设置更新速率开始输出
 		virtual void init(float rate) = 0;
 
@@ -138,24 +135,24 @@ namespace sky
 	};
 
 
-	template<size_t N>
-	class PwmPeriodDma
-	{
-	protected:
-		PwmOut pwm;
-	public:
-		array<uint16_t, N> buf;
+	//template<size_t N>
+	//class PwmPeriodDma
+	//{
+	//protected:
+	//	PwmOut pwm;
+	//public:
+	//	array<uint16_t, N> buf;
 
-		PwmPeriodDma(PinName pin, array<uint16_t, N> buf) :
-			pwm(pin),
-			buf(buf)
-		{
-		}
+	//	PwmPeriodDma(PinName pin, array<uint16_t, N> buf) :
+	//		pwm(pin),
+	//		buf(buf)
+	//	{
+	//	}
 
-		~PwmPeriodDma()
-		{
-		}
-	};
+	//	~PwmPeriodDma()
+	//	{
+	//	}
+	//};
 
 }
 

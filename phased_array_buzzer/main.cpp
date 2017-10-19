@@ -46,14 +46,14 @@ void setup()
 			0
 		);
 	}
-
-	Thread thread(ThreadBody);
 }
 
 int main()
 {
 	setup();
-	
+
+	Thread thread(ThreadBody);
+
 	for (;;)
 	{
 		g_LED2 = !g_LED2;

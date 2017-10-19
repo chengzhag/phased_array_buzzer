@@ -85,6 +85,7 @@
     <ClInclude Include="myDrivers\PeriodicSignal.h" />
     <ClInclude Include="myDrivers\PwmPeriod.h" />
     <ClInclude Include="myDrivers\TicToc.h" />
+    <None Include="ClassDiagram.cd" />
     <None Include="mbed.mak" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_gpio.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_lp_ticker_api.c" />
@@ -531,6 +532,7 @@
     <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h" />
     <None Include="Makefile" />
     <None Include="debug.mak" />
+    <None Include="myDrivers\PwmPeriod.cd" />
     <None Include="release.mak" />
     <None Include="phased_array_buzzer-Debug.vgdbsettings" />
     <None Include="phased_array_buzzer-Release.vgdbsettings" />

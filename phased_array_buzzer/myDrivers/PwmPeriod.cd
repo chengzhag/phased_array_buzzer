@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sky::PwmPeriodDirectArray&lt;ArraySize, BufferSize&gt;">
+    <Position X="0.5" Y="4" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAJAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAIA=</HashCode>
+      <FileName>myDrivers\PwmPeriod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sky::PwmPeriodArray&lt;ArraySize, BufferSize&gt;">
+    <Position X="0.75" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>myDrivers\PwmPeriod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="array&lt;_Tp, _Nm&gt;" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIECADAAAABAAKAAAAASAAEAAAAIgQgQAgAEAAI=</HashCode>
+      <FileName>c:\SysGCC\arm-eabi\arm-eabi\include\c++\6.2.0\array</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

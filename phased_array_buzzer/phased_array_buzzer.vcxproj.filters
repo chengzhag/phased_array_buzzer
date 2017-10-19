@@ -37,6 +37,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="myDrivers\PwmPeriod.cd">
+      <Filter>Header files\myDrivers</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="mbed.mak">
