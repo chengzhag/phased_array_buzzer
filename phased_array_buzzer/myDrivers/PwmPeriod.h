@@ -10,17 +10,34 @@ namespace sky
 {
 	//通过函数直接周期改变pwm占空比
 	template<size_t N>
-	class PwmPeriod :public array<float, N>
+	class PwmPeriod
 	{
 	protected:
 		PwmOut pwm;
+		array<float, N> buf;
 	public:
 		PwmPeriod(PinName pin, float frq = 500e3f, array<float, N> buf = { 0 }) :
 			pwm(pin),
-			array<float, N>(buf)
+			buf(buf)
 		{
 			pwm.write(0);
 			setFrq(frq);
+		}
+
+		//buf相关函数
+		auto begin()
+		{
+			return buf.begin();
+		}
+
+		auto end()
+		{
+			return buf.end();
+		}
+		
+		auto	operator[](size_t __n)
+		{
+			return buf[__n];
 		}
 
 		//设置pwm频率
@@ -38,9 +55,10 @@ namespace sky
 
 	//周期控制pwm占空比类组
 	template<size_t ArraySize, size_t BufferSize>
-	class PwmPeriodArray:public array<PwmPeriod<BufferSize>, ArraySize>
+	class PwmPeriodArray 
 	{
 	protected:
+		array<PwmPeriod<BufferSize>, ArraySize> pwmPeriods;
 		//设置更新速率开始输出
 		virtual void init(float rate) = 0;
 
@@ -49,17 +67,33 @@ namespace sky
 			array<PwmPeriod<BufferSize>, ArraySize> pwmPeriods,
 			float frq = 500e3f
 		) :
-			array<PwmPeriod<BufferSize>, ArraySize>(pwmPeriods)
+			pwmPeriods(pwmPeriods)
 		{
 			setFrq(frq);
+		}
+
+		//pwmPeriods相关函数
+		auto begin()
+		{
+			return pwmPeriods.begin();
+		}
+
+		auto end()
+		{
+			return pwmPeriods.end();
+		}
+
+		auto	operator[](size_t __n)
+		{
+			return pwmPeriods[__n];
 		}
 
 		//设置pwm频率
 		void setFrq(float frq)
 		{
 			for_each(
-				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
-				array<PwmPeriod<BufferSize>, ArraySize>::end(),
+				begin(),
+				end(),
 				[frq](auto &p) {p.setFrq(frq); }
 			);
 		}
@@ -92,8 +126,8 @@ namespace sky
 			if (i == BufferSize)
 				i = 0;
 			for_each(
-				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
-				array<PwmPeriod<BufferSize>, ArraySize>::end(),
+				PwmPeriodArray<ArraySize, BufferSize>::begin(),
+				PwmPeriodArray<ArraySize, BufferSize>::end(),
 				[this](auto &p) {p.setDuty(p[this->i]); }
 			);
 			i++;
