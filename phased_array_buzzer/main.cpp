@@ -6,7 +6,7 @@ DigitalOut g_LED1(LED1);
 DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
-const size_t bufSize = 16;
+const size_t bufSize = 8;
 
 static void ThreadBody()
 {
@@ -21,12 +21,11 @@ static void ThreadBody()
 		PwmPeriod<bufSize>(PB_10),
 		PwmPeriod<bufSize>(PB_11),
 	},
-	20e3f,
-	4
-	);
+	100e3f,16000
+	);//pwm时钟默认只有1M？！！导致20K下比较值只有50，预分频系数为1？
 	BuzzerArray<8, bufSize> buzzerArray(pwmPeriodArray);
 
-	buzzerArray.setSins(1, 0);
+	buzzerArray.setSins(0.9, 0);
 
 	for (;;)
 	{
