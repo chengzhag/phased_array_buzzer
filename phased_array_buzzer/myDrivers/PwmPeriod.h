@@ -60,7 +60,7 @@ namespace sky
 			for_each(
 				array<PwmPeriod<BufferSize>, ArraySize>::begin(),
 				array<PwmPeriod<BufferSize>, ArraySize>::end(),
-				[frq](PwmPeriod<BufferSize> p) {p.setFrq(frq); }
+				[frq](auto &p) {p.setFrq(frq); }
 			);
 		}
 
@@ -177,6 +177,35 @@ namespace sky
 		{
 			this->p2ps = p2ps,
 			this->phases = phases;
+			refreshBufs();
+		}
+
+		//根据输入的数值刷新pwms的峰峰值
+		void setP2ps(float p2ps)
+		{
+			for (auto &p2p : this->p2ps)
+				p2p = p2ps;
+			refreshBufs();
+		}
+
+		//根据输入的数值刷新pwms的相位
+		void setPhases(float phases)
+		{
+			for (auto &phase : this->phases)
+				phase = phases;
+			refreshBufs();
+		}
+
+		//根据输入的数值刷新pwms的峰峰值和相位
+		void setSins(
+			float p2ps,
+			float phases
+		)
+		{
+			for (auto &p2p : this->p2ps)
+				p2p = p2ps;
+			for (auto &phase : this->phases)
+				phase = phases;
 			refreshBufs();
 		}
 
