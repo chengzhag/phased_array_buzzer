@@ -8,6 +8,38 @@
 
 namespace sky 
 {
+	////接口，用于周期输出信号到IO口
+	//template<size_t N>
+	//class PeriodOutput
+	//{
+	//protected:
+	//	array<float, N> buf;
+	//public:
+	//	PeriodOutput(array<float, N> buf = { 0 }) :
+	//		buf(buf)
+	//	{
+
+	//	}
+
+	//	//buf相关函数
+	//	auto begin()
+	//	{
+	//		return buf.begin();
+	//	}
+
+	//	auto end()
+	//	{
+	//		return buf.end();
+	//	}
+
+	//	auto	operator[](size_t __n)
+	//	{
+	//		return buf[__n];
+	//	}
+
+
+	//};
+
 	//通过函数直接周期改变pwm占空比
 	template<size_t N>
 	class PwmPeriod
@@ -35,7 +67,7 @@ namespace sky
 			return buf.end();
 		}
 		
-		auto	operator[](size_t __n)
+		auto& operator[](size_t __n)
 		{
 			return buf[__n];
 		}
@@ -52,6 +84,29 @@ namespace sky
 			pwm.write(duty);
 		}
 	};
+
+	////接口，用于周期输出信号到IO口阵列，并可控制采样率和幅度、相位
+	//template<size_t ArraySize, size_t BufferSize>
+	//class PeriodOutputArray
+	//{
+	//protected:
+	//	array<PeriodOutput<BufferSize>, ArraySize> *periodOutputs;
+
+	//	//设置更新速率开始输出
+	//	virtual void init(float rate) = 0;
+	//public:
+	//	PeriodOutputArray(
+	//		array<PeriodOutput<BufferSize>, ArraySize> &periodOutputs
+	//	) :
+	//		periodOutputs(*periodOutputs)
+	//	{
+
+	//	}
+
+	//	//设置输出信号采样率
+	//	virtual void setSampleRate(float frq) = 0;
+
+	//};
 
 	//周期控制pwm占空比类组
 	template<size_t ArraySize, size_t BufferSize>
@@ -83,7 +138,7 @@ namespace sky
 			return pwmPeriods.end();
 		}
 
-		auto	operator[](size_t __n)
+		auto& operator[](size_t __n)
 		{
 			return pwmPeriods[__n];
 		}
