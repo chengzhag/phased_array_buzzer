@@ -17,7 +17,7 @@ namespace sky
 	class PdmPeriodOutputArray :public PeriodOutputArray
 	{
 	protected:
-		//TODO：pdm IO并口和buf
+		//TODO：pdm IO并口和buf: vector<bitset<ArraySize>>
 		Ticker ticker;
 		size_t index = 0;
 		Frqer frqer;

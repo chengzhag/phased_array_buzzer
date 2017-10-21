@@ -11,19 +11,20 @@ namespace sky
 {
 	using namespace std;
 
-	class PwmPeriodOutput :public PeriodOutput
+
+	class PwmPeriodOutput :public PeriodOutput<float>
 	{
 	protected:
 		PwmOut pwm;
 	public:
 		PwmPeriodOutput(PinName pin, size_t samplePoints = 0) :
 			pwm(pin),
-			PeriodOutput(samplePoints)
+			PeriodOutput<float>(samplePoints)
 		{}
 
 		PwmPeriodOutput(const PwmPeriodOutput &pwmPeriodOutput) :
 			pwm(pwmPeriodOutput.pwm),
-			PeriodOutput(pwmPeriodOutput)
+			PeriodOutput<float>(pwmPeriodOutput)
 		{}
 
 		//…Ë÷√pwm∆µ¬ 

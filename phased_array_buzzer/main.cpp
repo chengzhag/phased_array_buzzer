@@ -10,7 +10,7 @@ const size_t bufSize = 8;
 
 static void ThreadBody()
 {
-	PdmPeriodOutputArray<8> test;
+	//PdmPeriodOutputArray<8> test;
 	PwmPeriodOutputArray<8> pwmPeriodOutputArray(
 	{
 		PwmPeriodOutput(PE_9),

@@ -63,12 +63,13 @@ namespace sky
 
 	//接口 PeriodOutput
 	//用于输出独立，可以组合的周期输出
+	template<typename BufT>
 	class PeriodOutput
 	{
 	protected:
-		vector<float> signal;
+		vector<BufT> signal;
 	public:
-		PeriodOutput(vector<float> signalInit = {}) :
+		PeriodOutput(vector<BufT> signalInit = {}) :
 			signal(signalInit)
 		{}
 
@@ -104,7 +105,8 @@ namespace sky
 		}
 
 		//输出下一个信号
-		virtual void output(size_t index) = 0;
+		//默认无操作，非软件控制输出可以不用实现
+		virtual void output(size_t index) {};
 	};
 
 }
