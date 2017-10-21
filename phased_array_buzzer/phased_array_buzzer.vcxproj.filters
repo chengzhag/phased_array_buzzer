@@ -1418,5 +1418,8 @@
     <ClInclude Include="myDrivers\BuzzerArray.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
+    <ClInclude Include="myDrivers\PdmPeriodOutputArray.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
