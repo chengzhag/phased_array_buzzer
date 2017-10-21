@@ -17,7 +17,6 @@ static void ThreadBody()
 		50e3f
 	);
 
-
 	//PwmPeriodOutputArray<8> pwmPeriodOutputArray(
 	//{
 	//	PwmPeriodOutput(PE_9),
@@ -35,7 +34,7 @@ static void ThreadBody()
 
 	BuzzerArray<3> buzzers(pdmPeriodOutputArray);
 
-	buzzers.setSamplePoints(50e3);
+	buzzers.setFrq(2);
 	buzzers.setSins(1, 0);
 
 	for (;;)

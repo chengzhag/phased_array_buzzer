@@ -89,6 +89,7 @@
     <ClInclude Include="myDrivers\PwmPeriodOutputArray.h" />
     <ClInclude Include="myDrivers\TicToc.h" />
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="mbed.mak" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_gpio.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_lp_ticker_api.c" />

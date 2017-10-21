@@ -56,9 +56,11 @@ namespace sky
 			if (index >= PeriodOutputArray::samplePoints)
 				index = 0;
 			if (PeriodOutputArray::samplePoints != 0)
+			{
 				for (auto &p : pwms)
 					p.output(index);
-			index++;
+				index++;
+			}
 			actualRate = frqer.frq();
 		}
 	public:

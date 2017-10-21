@@ -45,7 +45,7 @@ namespace sky
 		}
 
 		//根据输入的phases数组刷新输出信号的相位
-		void setPhases(const array<float, ArraySize> & phases)
+		void setPhases(const array<float, ArraySize> &phases)
 		{
 			this->phases = phases;
 			refreshSignal();
@@ -91,6 +91,12 @@ namespace sky
 			refreshSignal();
 		}
 
+		//设置正弦信号频率
+		void setFrq(float frq)
+		{
+			setPointsAndRefresh(outputs->getSampleRate() / frq);
+		}
+
 		//设置采样速率
 		void setSampleRate(float rate)
 		{
@@ -101,7 +107,14 @@ namespace sky
 		void setSamplePoints(size_t samplePoints)
 		{
 			outputs->setSamplePoints(samplePoints);
+		}
+
+		//设置样本点数并刷新正弦样本点
+		void setPointsAndRefresh(size_t samplePoints)
+		{
+			outputs->setSamplePoints(samplePoints);
 			refreshSignal();
 		}
+
 	};
 }

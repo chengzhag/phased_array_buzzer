@@ -56,8 +56,10 @@ namespace sky
 			if (index >= PeriodOutputArray::samplePoints)
 				index = 0;
 			if (PeriodOutputArray::samplePoints != 0)
+			{
 				pout.write(signal[index]);
-			index++;
+				index++;
+			}
 			actualRate = frqer.frq();
 		}
 	public:
