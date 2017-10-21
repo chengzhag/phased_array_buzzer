@@ -22,7 +22,7 @@ namespace sky
 		//从p2ps和phases数组刷新pwms的buf
 		void refreshSignal()
 		{
-			for (int i = 0; i < ArraySize; i++)
+			for (size_t i = 0; i < ArraySize; i++)
 				outputs->setSignal(
 					[this, i](float x) {return float(this->p2ps[i] * 0.5* sin(2 * PI *x + this->phases[i]) + 0.5); },
 					i

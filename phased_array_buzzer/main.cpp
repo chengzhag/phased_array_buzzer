@@ -2,39 +2,46 @@
 #include <rtos.h>
 #include "myDrivers.h"
 
-DigitalOut g_LED1(LED1);
-DigitalOut g_LED2(LED2);
+//DigitalOut g_LED1(LED1);
+//DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
-const size_t bufSize = 8;
+
 
 static void ThreadBody()
 {
-	//PdmPeriodOutputArray<8> test;
-	PwmPeriodOutputArray<8> pwmPeriodOutputArray(
+	PdmPeriodOutputArray<3> pdmPeriodOutputArray(
 	{
-		PwmPeriodOutput(PE_9),
-		PwmPeriodOutput(PE_11),
-		PwmPeriodOutput(PE_13),
-		PwmPeriodOutput(PE_14),
-		PwmPeriodOutput(PA_5),
-		PwmPeriodOutput(PB_15),
-		PwmPeriodOutput(PB_10),
-		PwmPeriodOutput(PB_11),
+		DigitalOut(LED1),DigitalOut(LED2),DigitalOut(LED3)
 	},
-	100e3f,
-	16e3f
+		50e3f
 	);
 
-	BuzzerArray<8> buzzers(pwmPeriodOutputArray);
 
-	buzzers.setSamplePoints(8);
-	buzzers.setSins(0.5, 0);
+	//PwmPeriodOutputArray<8> pwmPeriodOutputArray(
+	//{
+	//	PwmPeriodOutput(PE_9),
+	//	PwmPeriodOutput(PE_11),
+	//	PwmPeriodOutput(PE_13),
+	//	PwmPeriodOutput(PE_14),
+	//	PwmPeriodOutput(PA_5),
+	//	PwmPeriodOutput(PB_15),
+	//	PwmPeriodOutput(PB_10),
+	//	PwmPeriodOutput(PB_11),
+	//},
+	//100e3f,
+	//16e3f
+	//);
+
+	BuzzerArray<3> buzzers(pdmPeriodOutputArray);
+
+	buzzers.setSamplePoints(50e3);
+	buzzers.setSins(1, 0);
 
 	for (;;)
 	{
-		g_LED1 = !g_LED1;
-		pc.printf("%f\r\n", pwmPeriodOutputArray.getActualRate());
+		//g_LED1 = !g_LED1;
+		pc.printf("%f\r\n", pdmPeriodOutputArray.getActualRate());
 		Thread::wait(500);
 	}
 }
@@ -47,7 +54,7 @@ int main()
 	
 	for (;;)
 	{
-		g_LED2 = !g_LED2;
+		//g_LED2 = !g_LED2;
 		pc.printf("%u, %u\r\n", thread.stack_size(), thread.used_stack());
 		Thread::wait(300);
 	}

@@ -63,7 +63,7 @@ namespace sky
 		}
 	public:
 		PwmPeriodOutputArray(
-			const array<PwmPeriodOutput, ArraySize>& pwms, 
+			const array<PwmPeriodOutput, ArraySize> &pwms,
 			float pwmFrq = 100e3f, 
 			float sampleRate = 16e3f
 		) :

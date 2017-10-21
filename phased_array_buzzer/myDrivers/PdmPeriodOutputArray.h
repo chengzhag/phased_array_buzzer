@@ -2,6 +2,7 @@
 #pragma once
 #include "mbed.h"
 #include <array>
+#include <bitset>
 #include <algorithm>
 
 #include "PeriodicSignal.h"
@@ -12,12 +13,38 @@ namespace sky
 {
 	using namespace std;
 
+	//用bitset写入的并口
+	template<size_t N>
+	class ParallelOut
+	{
+	protected:
+		array<DigitalOut, N> outputs;
+	public:
+		ParallelOut(
+			const array<DigitalOut, N> &outputs
+		) :
+			outputs(outputs)
+		{
+
+		}
+
+		void write(const bitset<N> &bits)
+		{
+			for (int i = 0; i < N; i++)
+			{
+				outputs[i].write(bits[i]);
+			}
+		}
+	};
 
 	template<size_t ArraySize>
 	class PdmPeriodOutputArray :public PeriodOutputArray
 	{
 	protected:
-		//TODO：pdm IO并口和buf: vector<bitset<ArraySize>>
+		//PortOut port;//若性能较差可考虑用PortOut
+		vector<bitset<ArraySize>> signal;
+		ParallelOut<ArraySize> pout;
+
 		Ticker ticker;
 		size_t index = 0;
 		Frqer frqer;
@@ -28,22 +55,22 @@ namespace sky
 		{
 			if (index >= PeriodOutputArray::samplePoints)
 				index = 0;
-			//if (PeriodOutputArray::samplePoints != 0)
-			//	for (auto &p : pwms)
-					//p.output(index);
-					//TODO：输出操作
+			if (PeriodOutputArray::samplePoints != 0)
+				pout.write(signal[index]);
 			index++;
 			actualRate = frqer.frq();
 		}
 	public:
 		PdmPeriodOutputArray(
-			float sampleRate = 16e3f
+			const array<DigitalOut, ArraySize> &pout,
+			float sampleRate = 50e3f
 		) :
+			pout(pout),
 			PeriodOutputArray(sampleRate)
 		{
 			ticker.attach(
 				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
-				1.f / sampleRate//TODO：sampleRate和中断频率之间的关系
+				1.f / sampleRate
 			);
 		}
 
@@ -52,7 +79,7 @@ namespace sky
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
 				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
-				1.f / sampleRate//TODO：sampleRate和中断频率之间的关系
+				1.f / sampleRate
 			);
 		}
 
@@ -65,17 +92,28 @@ namespace sky
 
 		virtual void setSamplePoints(size_t samplePoints) override
 		{
-			//TODO：samplePoints到buf长度的计算
-			//PeriodOutputArray::setSamplePoints(samplePoints);
-			//for (auto &p : pwms)
-			//	p.setSamplePoints(samplePoints);
+			PeriodOutputArray::setSamplePoints(samplePoints);
+			signal.resize(samplePoints);
 		}
 
 
 		virtual void setSignal(function<float(float) > periodFunction, size_t n) override
 		{
-			//TODO：幅度到buf pdm比特序列的转换
-			//pwms[n].setSignal(periodFunction);
+			float accumulator = 0;
+			size_t signalSize = signal.size();
+			for (size_t index = 0; index < signalSize; index++)
+			{
+				accumulator += periodFunction((float)index / signalSize);
+				if (accumulator>1.f)
+				{
+					accumulator -= 1.f;
+					signal[index][n] = 1;
+				}
+				else
+				{
+					signal[index][n] = 0;
+				}
+			}
 		}
 
 		virtual void setSignal(function<float(float)> periodFunction)
