@@ -1,6 +1,8 @@
 #pragma once
 
-#include "PwmPeriod.h"
+#include "PeriodOutputArray.h"
+#include "PwmPeriodOutputArray.h"
+#include "BuzzerArray.h"
 #include "Frqer.h"
 #include "TicToc.h"
 

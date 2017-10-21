@@ -38,7 +38,7 @@
   <ItemGroup>
     <None Include="Makefile" />
     <None Include="ClassDiagram.cd" />
-    <None Include="myDrivers\PwmPeriod.cd">
+    <None Include="myDrivers\PwmPeriodOutputArray.cd">
       <Filter>Header files\myDrivers</Filter>
     </None>
   </ItemGroup>
@@ -1403,14 +1403,20 @@
     <ClInclude Include="myDrivers\PeriodicSignal.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
-    <ClInclude Include="myDrivers\PwmPeriod.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
     <ClInclude Include="myDrivers\Frqer.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
     <ClInclude Include="myDrivers\TicToc.h">
       <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PeriodOutputArray.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PwmPeriodOutputArray.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\BuzzerArray.h">
+      <Filter>Header files\myDrivers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

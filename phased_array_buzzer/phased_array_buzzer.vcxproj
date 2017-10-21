@@ -80,10 +80,12 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClInclude Include="myDrivers\BuzzerArray.h" />
     <ClInclude Include="myDrivers\Frqer.h" />
     <ClInclude Include="myDrivers\myDrivers.h" />
     <ClInclude Include="myDrivers\PeriodicSignal.h" />
-    <ClInclude Include="myDrivers\PwmPeriod.h" />
+    <ClInclude Include="myDrivers\PeriodOutputArray.h" />
+    <ClInclude Include="myDrivers\PwmPeriodOutputArray.h" />
     <ClInclude Include="myDrivers\TicToc.h" />
     <None Include="ClassDiagram.cd" />
     <None Include="mbed.mak" />
@@ -532,7 +534,7 @@
     <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h" />
     <None Include="Makefile" />
     <None Include="debug.mak" />
-    <None Include="myDrivers\PwmPeriod.cd" />
+    <None Include="myDrivers\PwmPeriodOutputArray.cd" />
     <None Include="release.mak" />
     <None Include="phased_array_buzzer-Debug.vgdbsettings" />
     <None Include="phased_array_buzzer-Release.vgdbsettings" />
