@@ -14,7 +14,7 @@ namespace sky
 	//½Ó¿Ú PeriodOutputArray
 	class PeriodOutputArray
 	{
-	protected: 
+	private:
 		float sampleRate = 0;
 		size_t samplePoints = 0;
 	public:

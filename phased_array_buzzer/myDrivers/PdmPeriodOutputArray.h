@@ -17,7 +17,7 @@ namespace sky
 	template<size_t N>
 	class ParallelOut
 	{
-	protected:
+	private:
 		array<DigitalOut, N> outputs;
 	public:
 		ParallelOut(
@@ -38,9 +38,9 @@ namespace sky
 	};
 
 	template<size_t ArraySize>
-	class PdmPeriodOutputArrayP :public PeriodOutputArray
+	class PdmPeriodOutputArrayBitset :public PeriodOutputArray
 	{
-	protected:
+	private:
 		//PortOut port;//若性能较差可考虑用PortOut
 		vector<bitset<ArraySize>> signal;
 		ParallelOut<ArraySize> pout;
@@ -53,17 +53,17 @@ namespace sky
 		//pdm定时中断函数
 		void tickerCallback()
 		{
-			if (index >= PeriodOutputArray::samplePoints)
-				index = 0;
-			if (PeriodOutputArray::samplePoints != 0)
+			if (getSamplePoints() != 0)
 			{
+				if (index >= getSamplePoints())
+					index = 0;
 				pout.write(signal[index]);
 				index++;
 			}
 			actualRate = frqer.frq();
 		}
 	public:
-		PdmPeriodOutputArrayP(
+		PdmPeriodOutputArrayBitset(
 			const array<DigitalOut, ArraySize> &pout,
 			float sampleRate = 50e3f
 		) :
@@ -71,7 +71,7 @@ namespace sky
 			PeriodOutputArray(sampleRate)
 		{
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArrayP<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutputArrayBitset<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -80,7 +80,7 @@ namespace sky
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArrayP<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutputArrayBitset<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -127,7 +127,7 @@ namespace sky
 
 	class PdmPeriodOutput :public PeriodOutput<uint8_t>
 	{
-	protected:
+	private:
 		DigitalOut pdm;
 	public:
 		PdmPeriodOutput(PinName pin, size_t samplePoints = 0) :
@@ -167,9 +167,9 @@ namespace sky
 
 
 	template<size_t ArraySize>
-	class PdmPeriodOutputArray :public PeriodOutputArray
+	class PdmPeriodOutputArrayUint8 :public PeriodOutputArray
 	{
-	protected:
+	private:
 		//若性能较差可考虑用PortOut
 		array<PdmPeriodOutput, ArraySize> pdms;
 		Ticker ticker;
@@ -180,10 +180,10 @@ namespace sky
 		//pdm定时中断函数
 		void tickerCallback()
 		{
-			if (index >= PeriodOutputArray::samplePoints)
-				index = 0;
-			if (PeriodOutputArray::samplePoints != 0)
+			if (getSamplePoints() != 0)
 			{
+				if (index >= getSamplePoints())
+					index = 0;
 				for (auto &p : pdms)
 					p.output(index);
 				index++;
@@ -191,7 +191,7 @@ namespace sky
 			actualRate = frqer.frq();
 		}
 	public:
-		PdmPeriodOutputArray(
+		PdmPeriodOutputArrayUint8(
 			const array<PdmPeriodOutput, ArraySize> &pdms,
 			float sampleRate = 50e3f
 		) :
@@ -199,7 +199,7 @@ namespace sky
 			PeriodOutputArray(sampleRate)
 		{
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutputArrayUint8<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -208,7 +208,7 @@ namespace sky
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutputArrayUint8<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}

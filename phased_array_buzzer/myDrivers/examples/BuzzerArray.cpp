@@ -6,7 +6,7 @@
 //DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
-//²âÊÔÊ¹ÓÃbitset¡¢ParallelOutput/vector<uint8_t>/PwmPeriodOutputArrayµÄËÙ¶È²î±ğ
+//æµ‹è¯•ä½¿ç”¨bitsetã€ParallelOutput/vector<uint8_t>/PwmPeriodOutputArrayçš„é€Ÿåº¦å·®åˆ«
 #define TEST_PdmPeriodOutputArrayBitset
 //#define TEST_PdmPeriodOutputArrayUint8
 //#define TEST_PwmPeriodOutputArray
@@ -14,12 +14,12 @@ Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
 static void ThreadBody()
 {	
-	//²âÊÔÊ¹ÓÃbitset¡¢ParallelOutputºÍÊ¹ÓÃvector<uint8_t>µÄËÙ¶È²î±ğ
+	//æµ‹è¯•ä½¿ç”¨bitsetã€ParallelOutputå’Œä½¿ç”¨vector<uint8_t>çš„é€Ÿåº¦å·®åˆ«
 	Timer timer;
 	timer.start();
 
 #ifdef TEST_PdmPeriodOutputArrayBitset
-	//Ê¹ÓÃbitset¡¢ParallelOutput
+	//ä½¿ç”¨bitsetã€ParallelOutput
 	//PdmPeriodOutputArrayBitset
 	//	construct : 0.002310s
 	//	setFrq : 0.013223s
@@ -37,7 +37,7 @@ static void ThreadBody()
 	BuzzerArray<3> buzzers(pdmPeriodOutputArray);
 #endif // TEST_PdmPeriodOutputArrayBitset
 #ifdef TEST_PdmPeriodOutputArrayUint8
-	//Ê¹ÓÃvector<uint8_t>
+	//ä½¿ç”¨vector<uint8_t>
 	//PdmPeriodOutputArrayUint8
 	//	construct : 0.002248s
 	//	setFrq : 0.011445s
@@ -55,7 +55,7 @@ static void ThreadBody()
 	BuzzerArray<3> buzzers(pdmPeriodOutputArray);
 #endif // TEST_PdmPeriodOutputArrayUint8
 #ifdef TEST_PwmPeriodOutputArray
-	//Ê¹ÓÃPwmPeriodOutputArray
+	//ä½¿ç”¨PwmPeriodOutputArray
 	//PwmPeriodOutputArray
 	//	construct : 0.001887s
 	//	setFrq : 0.001538s
@@ -76,7 +76,7 @@ static void ThreadBody()
 	//	PwmPeriodOutput(PB_11),
 	},
 	100e3f,
-	SAMPLE_RATE / 8//Èç¹ûÖ»ĞèÒª´ïµ½3bitDACĞ§¹û
+	SAMPLE_RATE / 8//å¦‚æœåªéœ€è¦è¾¾åˆ°3bitDACæ•ˆæœ
 	);
 	BuzzerArray<3> buzzers(pwmPeriodOutputArray);
 #endif // TEST_PwmPeriodOutputArray

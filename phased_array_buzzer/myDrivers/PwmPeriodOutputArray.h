@@ -14,7 +14,7 @@ namespace sky
 
 	class PwmPeriodOutput :public PeriodOutput<float>
 	{
-	protected:
+	private:
 		PwmOut pwm;
 	public:
 		PwmPeriodOutput(PinName pin, size_t samplePoints = 0) :
@@ -43,7 +43,7 @@ namespace sky
 	template<size_t ArraySize>
 	class PwmPeriodOutputArray :public PeriodOutputArray
 	{
-	protected:
+	private:
 		array<PwmPeriodOutput, ArraySize> pwms;
 		Ticker ticker;
 		size_t index = 0;
@@ -53,10 +53,10 @@ namespace sky
 		//pwm占空比定时中断函数
 		void tickerCallback()
 		{
-			if (index >= PeriodOutputArray::samplePoints)
-				index = 0;
-			if (PeriodOutputArray::samplePoints != 0)
+			if (getSamplePoints() != 0)
 			{
+				if (index >= getSamplePoints())
+					index = 0;
 				for (auto &p : pwms)
 					p.output(index);
 				index++;
