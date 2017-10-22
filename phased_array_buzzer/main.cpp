@@ -7,10 +7,10 @@
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
 //测试使用bitset、ParallelOutput/vector<uint8_t>/PwmPeriodOutputArray的速度差别
-#define TEST_PdmPeriodOutputArrayBitset
+//#define TEST_PdmPeriodOutputArrayBitset
 //#define TEST_PdmPeriodOutputArrayUint8
-//#define TEST_PwmPeriodOutputArray
-#define SAMPLE_RATE 1e3f
+#define TEST_PwmPeriodOutputArray
+#define SAMPLE_RATE 100e3f
 
 static void ThreadBody()
 {	
@@ -30,7 +30,7 @@ static void ThreadBody()
 	pc.printf("PdmPeriodOutputArrayBitset\r\n");
 	PdmPeriodOutputArrayBitset<3> pdmPeriodOutputArray(
 	{
-		DigitalOut(LED1),DigitalOut(LED2),DigitalOut(LED3)
+		DigitalOut(PE_9),DigitalOut(PE_11),DigitalOut(PE_13)
 	},
 		SAMPLE_RATE
 	);
@@ -48,7 +48,7 @@ static void ThreadBody()
 	pc.printf("PdmPeriodOutputArrayUint8\r\n");
 	PdmPeriodOutputArrayUint8<3> pdmPeriodOutputArray(
 	{
-		PdmPeriodOutput(LED1),PdmPeriodOutput(LED2),PdmPeriodOutput(LED3)
+		PdmPeriodOutput(PE_9),PdmPeriodOutput(PE_11),PdmPeriodOutput(PE_13)
 	},
 		SAMPLE_RATE
 	);
@@ -76,7 +76,7 @@ static void ThreadBody()
 	//	PwmPeriodOutput(PB_11),
 	},
 	100e3f,
-	SAMPLE_RATE / 8//如果只需要达到3bitDAC效果
+	25e3f
 	);
 	BuzzerArray<3> buzzers(pwmPeriodOutputArray);
 #endif // TEST_PwmPeriodOutputArray
@@ -84,38 +84,44 @@ static void ThreadBody()
 	pc.printf("construct: %fs\r\n", timer.read());
 
 	timer.reset();
-	buzzers.setFrq(2);
+	buzzers.setFrq(2e3f);
 	pc.printf("setFrq: %fs\r\n", timer.read());
 
 	timer.reset();
 	buzzers.setSins(1, 0);
 	pc.printf("setSins: %fs\r\n", timer.read());
 
-	Thread::wait(2000);
+	//Thread::wait(2000);
 
-	timer.reset();
-	buzzers.setPhases({ 0,PI / 3,PI * 2 / 3 });
-	pc.printf("setPhases: %fs\r\n", timer.read());
+	//timer.reset();
+	//buzzers.setPhases({ 0,PI / 3,PI * 2 / 3 });
+	//pc.printf("setPhases: %fs\r\n", timer.read());
 
-	Thread::wait(2000);
+	//Thread::wait(2000);
 
-	timer.reset();
-	buzzers.setP2ps({ 0.1,0.5,0.9 });
-	pc.printf("setP2ps: %fs\r\n", timer.read());
+	//timer.reset();
+	//buzzers.setP2ps({ 0.1,0.5,0.9 });
+	//pc.printf("setP2ps: %fs\r\n", timer.read());
 
-	Thread::wait(2000);
+	//Thread::wait(2000);
 
-	timer.reset();
-	buzzers.setFrq(1);
-	pc.printf("setFrq: %fs\r\n", timer.read());
+	//timer.reset();
+	//buzzers.setFrq(1);
+	//pc.printf("setFrq: %fs\r\n", timer.read());
 
 
-
+	float phase = 0;
+	float delta = 0.001;
 	for (;;)
 	{
+		if (phase > PI * 2 || phase < 0)
+			delta = -delta;
+		phase += delta;
+		buzzers.setPhases({ 0,phase,phase * 2 });
+		
 		//g_LED1 = !g_LED1;
 		//pc.printf("%f\r\n", pdmPeriodOutputArray.getActualRate());
-		Thread::wait(500);
+		//Thread::wait(10);
 	}
 }
 
