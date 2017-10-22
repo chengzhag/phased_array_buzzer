@@ -38,7 +38,7 @@ namespace sky
 	};
 
 	template<size_t ArraySize>
-	class PdmPeriodOutputArray :public PeriodOutputArray
+	class PdmPeriodOutputArrayP :public PeriodOutputArray
 	{
 	protected:
 		//PortOut port;//若性能较差可考虑用PortOut
@@ -50,7 +50,7 @@ namespace sky
 		Frqer frqer;
 		float actualRate;
 
-		//pwm占空比定时中断函数
+		//pdm定时中断函数
 		void tickerCallback()
 		{
 			if (index >= PeriodOutputArray::samplePoints)
@@ -63,7 +63,7 @@ namespace sky
 			actualRate = frqer.frq();
 		}
 	public:
-		PdmPeriodOutputArray(
+		PdmPeriodOutputArrayP(
 			const array<DigitalOut, ArraySize> &pout,
 			float sampleRate = 50e3f
 		) :
@@ -71,7 +71,7 @@ namespace sky
 			PeriodOutputArray(sampleRate)
 		{
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutputArrayP<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -80,7 +80,7 @@ namespace sky
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutputArrayP<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -125,7 +125,120 @@ namespace sky
 		}
 	};
 
+	class PdmPeriodOutput :public PeriodOutput<uint8_t>
+	{
+	protected:
+		DigitalOut pdm;
+	public:
+		PdmPeriodOutput(PinName pin, size_t samplePoints = 0) :
+			pdm(pin),
+			PeriodOutput<uint8_t>(samplePoints)
+		{}
 
+		PdmPeriodOutput(const PdmPeriodOutput &pdmPeriodOutput) :
+			pdm(pdmPeriodOutput.pdm),
+			PeriodOutput<uint8_t>(pdmPeriodOutput)
+		{}
+
+		virtual void output(size_t index) override
+		{
+			pdm.write(signal[index]);
+		}
+
+		virtual void setSignal(function<float(float)> periodFunction) override
+		{
+			float accumulator = 0;
+			size_t signalSize = signal.size();
+			for (size_t index = 0; index < signalSize; index++)
+			{
+				accumulator += periodFunction((float)index / signalSize);
+				if (accumulator > 1.f)
+				{
+					accumulator -= 1.f;
+					signal[index] = 1;
+				}
+				else
+				{
+					signal[index] = 0;
+				}
+			}
+		}
+	};
+
+
+	template<size_t ArraySize>
+	class PdmPeriodOutputArray :public PeriodOutputArray
+	{
+	protected:
+		//若性能较差可考虑用PortOut
+		array<PdmPeriodOutput, ArraySize> pdms;
+		Ticker ticker;
+		size_t index = 0;
+		Frqer frqer;
+		float actualRate;
+
+		//pdm定时中断函数
+		void tickerCallback()
+		{
+			if (index >= PeriodOutputArray::samplePoints)
+				index = 0;
+			if (PeriodOutputArray::samplePoints != 0)
+			{
+				for (auto &p : pdms)
+					p.output(index);
+				index++;
+			}
+			actualRate = frqer.frq();
+		}
+	public:
+		PdmPeriodOutputArray(
+			const array<PdmPeriodOutput, ArraySize> &pdms,
+			float sampleRate = 50e3f
+		) :
+			pdms(pdms),
+			PeriodOutputArray(sampleRate)
+		{
+			ticker.attach(
+				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
+				1.f / sampleRate
+			);
+		}
+
+		virtual void setSampleRate(float sampleRate) override
+		{
+			PeriodOutputArray::setSampleRate(sampleRate);
+			ticker.attach(
+				callback(this, &PdmPeriodOutputArray<ArraySize>::tickerCallback),
+				1.f / sampleRate
+			);
+		}
+
+		//获取实际刷新速率
+		auto getActualRate()
+		{
+			return actualRate;
+		}
+
+
+		virtual void setSamplePoints(size_t samplePoints) override
+		{
+			PeriodOutputArray::setSamplePoints(samplePoints);
+			for (auto &p : pdms)
+				p.setSamplePoints(samplePoints);
+		}
+
+
+		virtual void setSignal(function<float(float) > periodFunction, size_t n) override
+		{
+			pdms[n].setSignal(periodFunction);
+		}
+
+		virtual void setSignal(function<float(float)> periodFunction)
+		{
+			for (size_t i = 0; i < ArraySize; i++)
+				setSignal(periodFunction, i);
+		}
+	};
 
 
 }
