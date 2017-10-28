@@ -4,7 +4,6 @@
 #include <algorithm>
 
 #include "PeriodicSignal.h"
-#include "PwmPeriodOutputArray.h"
 #include "Frqer.h"
 
 namespace sky

@@ -38,9 +38,6 @@
   <ItemGroup>
     <None Include="Makefile" />
     <None Include="ClassDiagram.cd" />
-    <None Include="myDrivers\PwmPeriodOutputArray.cd">
-      <Filter>Header files\myDrivers</Filter>
-    </None>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
@@ -1407,19 +1404,25 @@
     <ClInclude Include="myDrivers\Frqer.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
-    <ClInclude Include="myDrivers\PeriodOutputArray.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PwmPeriodOutputArray.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
     <ClInclude Include="myDrivers\BuzzerArray.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
-    <ClInclude Include="myDrivers\PdmPeriodOutputArray.h">
+    <ClInclude Include="myDrivers\TicToc.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
-    <ClInclude Include="myDrivers\TicToc.h">
+    <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PdmPeriodOutArraySoft.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PwmPeriodOutArrayDma.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PwmPeriodOutArraySoft.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PeriodOutArray.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
   </ItemGroup>

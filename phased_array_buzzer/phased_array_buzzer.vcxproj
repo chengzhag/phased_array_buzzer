@@ -83,10 +83,12 @@
     <ClInclude Include="myDrivers\BuzzerArray.h" />
     <ClInclude Include="myDrivers\Frqer.h" />
     <ClInclude Include="myDrivers\myDrivers.h" />
-    <ClInclude Include="myDrivers\PdmPeriodOutputArray.h" />
+    <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h" />
+    <ClInclude Include="myDrivers\PdmPeriodOutArraySoft.h" />
     <ClInclude Include="myDrivers\PeriodicSignal.h" />
-    <ClInclude Include="myDrivers\PeriodOutputArray.h" />
-    <ClInclude Include="myDrivers\PwmPeriodOutputArray.h" />
+    <ClInclude Include="myDrivers\PeriodOutArray.h" />
+    <ClInclude Include="myDrivers\PwmPeriodOutArrayDma.h" />
+    <ClInclude Include="myDrivers\PwmPeriodOutArraySoft.h" />
     <ClInclude Include="myDrivers\TicToc.h" />
     <None Include="ClassDiagram.cd" />
     <None Include="ClassDiagram1.cd" />
@@ -536,7 +538,6 @@
     <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h" />
     <None Include="Makefile" />
     <None Include="debug.mak" />
-    <None Include="myDrivers\PwmPeriodOutputArray.cd" />
     <None Include="release.mak" />
     <None Include="phased_array_buzzer-Debug.vgdbsettings" />
     <None Include="phased_array_buzzer-Release.vgdbsettings" />

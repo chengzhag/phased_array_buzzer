@@ -1,12 +1,11 @@
 #pragma once
-#pragma once
 #include "mbed.h"
 #include <array>
 #include <bitset>
 #include <algorithm>
 
 #include "PeriodicSignal.h"
-#include "PeriodOutputArray.h"
+#include "PeriodOutArray.h"
 #include "Frqer.h"
 
 namespace sky
@@ -38,7 +37,7 @@ namespace sky
 	};
 
 	template<size_t ArraySize>
-	class PdmPeriodOutputArrayBitset :public PeriodOutputArray
+	class PdmPeriodOutArrayBitsetSoft :public PeriodOutputArray
 	{
 	private:
 		//PortOut port;//若性能较差可考虑用PortOut
@@ -63,7 +62,7 @@ namespace sky
 			actualRate = frqer.frq();
 		}
 	public:
-		PdmPeriodOutputArrayBitset(
+		PdmPeriodOutArrayBitsetSoft(
 			const array<DigitalOut, ArraySize> &pout,
 			float sampleRate = 50e3f
 		) :
@@ -71,7 +70,7 @@ namespace sky
 			PeriodOutputArray(sampleRate)
 		{
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArrayBitset<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutArrayBitsetSoft<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -80,7 +79,7 @@ namespace sky
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArrayBitset<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutArrayBitsetSoft<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -125,17 +124,17 @@ namespace sky
 		}
 	};
 
-	class PdmPeriodOutput :public PeriodOutput<uint8_t>
+	class PdmPeriodOutUint8Soft :public PeriodOutput<uint8_t>
 	{
 	private:
 		DigitalOut pdm;
 	public:
-		PdmPeriodOutput(PinName pin, size_t samplePoints = 0) :
+		PdmPeriodOutUint8Soft(PinName pin, size_t samplePoints = 0) :
 			pdm(pin),
 			PeriodOutput<uint8_t>(samplePoints)
 		{}
 
-		PdmPeriodOutput(const PdmPeriodOutput &pdmPeriodOutput) :
+		PdmPeriodOutUint8Soft(const PdmPeriodOutUint8Soft &pdmPeriodOutput) :
 			pdm(pdmPeriodOutput.pdm),
 			PeriodOutput<uint8_t>(pdmPeriodOutput)
 		{}
@@ -167,11 +166,11 @@ namespace sky
 
 
 	template<size_t ArraySize>
-	class PdmPeriodOutputArrayUint8 :public PeriodOutputArray
+	class PdmPeriodOutArrayUint8Soft :public PeriodOutputArray
 	{
 	private:
 		//若性能较差可考虑用PortOut
-		array<PdmPeriodOutput, ArraySize> pdms;
+		array<PdmPeriodOutUint8Soft, ArraySize> pdms;
 		Ticker ticker;
 		size_t index = 0;
 		Frqer frqer;
@@ -191,15 +190,15 @@ namespace sky
 			actualRate = frqer.frq();
 		}
 	public:
-		PdmPeriodOutputArrayUint8(
-			const array<PdmPeriodOutput, ArraySize> &pdms,
+		PdmPeriodOutArrayUint8Soft(
+			const array<PdmPeriodOutUint8Soft, ArraySize> &pdms,
 			float sampleRate = 50e3f
 		) :
 			pdms(pdms),
 			PeriodOutputArray(sampleRate)
 		{
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArrayUint8<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutArrayUint8Soft<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -208,7 +207,7 @@ namespace sky
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
-				callback(this, &PdmPeriodOutputArrayUint8<ArraySize>::tickerCallback),
+				callback(this, &PdmPeriodOutArrayUint8Soft<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}

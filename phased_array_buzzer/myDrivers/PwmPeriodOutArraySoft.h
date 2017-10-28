@@ -4,7 +4,7 @@
 #include <algorithm>
 
 #include "PeriodicSignal.h"
-#include "PeriodOutputArray.h"
+#include "PeriodOutArray.h"
 #include "Frqer.h"
 
 namespace sky 
@@ -12,17 +12,17 @@ namespace sky
 	using namespace std;
 
 
-	class PwmPeriodOutput :public PeriodOutput<float>
+	class PwmPeriodOutSoft :public PeriodOutput<float>
 	{
 	private:
 		PwmOut pwm;
 	public:
-		PwmPeriodOutput(PinName pin, size_t samplePoints = 0) :
+		PwmPeriodOutSoft(PinName pin, size_t samplePoints = 0) :
 			pwm(pin),
 			PeriodOutput<float>(samplePoints)
 		{}
 
-		PwmPeriodOutput(const PwmPeriodOutput &pwmPeriodOutput) :
+		PwmPeriodOutSoft(const PwmPeriodOutSoft &pwmPeriodOutput) :
 			pwm(pwmPeriodOutput.pwm),
 			PeriodOutput<float>(pwmPeriodOutput)
 		{}
@@ -41,10 +41,10 @@ namespace sky
 	};
 
 	template<size_t ArraySize>
-	class PwmPeriodOutputArray :public PeriodOutputArray
+	class PwmPeriodOutArraySoft :public PeriodOutputArray
 	{
 	private:
-		array<PwmPeriodOutput, ArraySize> pwms;
+		array<PwmPeriodOutSoft, ArraySize> pwms;
 		Ticker ticker;
 		size_t index = 0;
 		Frqer frqer;
@@ -64,8 +64,8 @@ namespace sky
 			actualRate = frqer.frq();
 		}
 	public:
-		PwmPeriodOutputArray(
-			const array<PwmPeriodOutput, ArraySize> &pwms,
+		PwmPeriodOutArraySoft(
+			const array<PwmPeriodOutSoft, ArraySize> &pwms,
 			float pwmFrq = 100e3f, 
 			float sampleRate = 16e3f
 		) :
@@ -74,7 +74,7 @@ namespace sky
 		{
 			setPwmFrq(pwmFrq);
 			ticker.attach(
-				callback(this, &PwmPeriodOutputArray<ArraySize>::tickerCallback),
+				callback(this, &PwmPeriodOutArraySoft<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
@@ -89,7 +89,7 @@ namespace sky
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
 			ticker.attach(
-				callback(this, &PwmPeriodOutputArray<ArraySize>::tickerCallback),
+				callback(this, &PwmPeriodOutArraySoft<ArraySize>::tickerCallback),
 				1.f / sampleRate
 			);
 		}
