@@ -7,6 +7,7 @@
 #include "PeriodicSignal.h"
 #include "PeriodOutArray.h"
 #include "Frqer.h"
+#include "myMath.h"
 
 namespace sky
 {
@@ -100,11 +101,13 @@ namespace sky
 
 		virtual void setSignal(function<float(float) > periodFunction, size_t n) override
 		{
-			float accumulator = 0;
+			float accumulator = 0, increase = 0;
 			size_t signalSize = signal.size();
 			for (size_t index = 0; index < signalSize; index++)
 			{
-				accumulator += periodFunction((float)index / signalSize);
+				increase = periodFunction((float)index / signalSize);
+				limit<float>(increase, 0.f, 1.f);
+				accumulator += increase;
 				if (accumulator>1.f)
 				{
 					accumulator -= 1.f;

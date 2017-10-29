@@ -1428,5 +1428,8 @@
     <ClInclude Include="myDrivers\PeriodOutArray.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
+    <ClInclude Include="myDrivers\myMath.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

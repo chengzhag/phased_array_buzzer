@@ -1,9 +1,8 @@
 #pragma once
 #include "mbed.h"
-#include <algorithm>
-#include <numeric>
 
 #include "PeriodOutArray.h"
+#include "myMath.h"
 
 namespace sky
 {
@@ -274,12 +273,14 @@ namespace sky
 
 		void _setSignal(function<float(float) > periodFunction, size_t n)
 		{
-			float accumulator = 0;
+			float accumulator = 0, increase = 0;
 			size_t signalSize = signal.size();
 			float step = 1 / (float)signalSize;
 			for (size_t index = 0; index < signalSize; index++)
 			{
-				accumulator += periodFunction((float)index * step);
+				increase = periodFunction((float)index / signalSize);
+				limit<float>(increase, 0.f, 1.f);
+				accumulator += increase;
 				if (accumulator > 1.f)
 				{
 					accumulator -= 1.f;

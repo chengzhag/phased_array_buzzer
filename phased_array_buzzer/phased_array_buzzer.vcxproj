@@ -83,6 +83,7 @@
     <ClInclude Include="myDrivers\BuzzerArray.h" />
     <ClInclude Include="myDrivers\Frqer.h" />
     <ClInclude Include="myDrivers\myDrivers.h" />
+    <ClInclude Include="myDrivers\myMath.h" />
     <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h" />
     <ClInclude Include="myDrivers\PdmPeriodOutArraySoft.h" />
     <ClInclude Include="myDrivers\PeriodicSignal.h" />
