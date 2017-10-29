@@ -140,12 +140,11 @@ namespace sky
 		virtual void setFrq(float frq) override
 		{
 			//º∆À„Prescaler∫ÕPeriod
-			uint16_t prescaler, period;
-			uint32_t dividN = SystemCoreClock / frq;
-			period = dividN % (uint32_t(numeric_limits<uint16_t>::max()) + 1) - 1;
-			prescaler = (dividN - 1) / (uint32_t(numeric_limits<uint16_t>::max()) + 1);
+			
+			uint32_t scaler = SystemCoreClock / frq;
+			uint16_t psc = scaler / 65536, period = scaler / (psc + 1) - 1;
 
-			htim->Init.Prescaler = prescaler;
+			htim->Init.Prescaler = psc;
 			htim->Init.Period = period;
 
 			if (HAL_TIM_Base_Init(htim) != HAL_OK)
@@ -277,9 +276,10 @@ namespace sky
 		{
 			float accumulator = 0;
 			size_t signalSize = signal.size();
+			float step = 1 / (float)signalSize;
 			for (size_t index = 0; index < signalSize; index++)
 			{
-				accumulator += periodFunction((float)index / signalSize);
+				accumulator += periodFunction((float)index * step);
 				if (accumulator > 1.f)
 				{
 					accumulator -= 1.f;

@@ -148,9 +148,10 @@ namespace sky
 		{
 			float accumulator = 0;
 			size_t signalSize = signal.size();
+			float step = 1 / (float)signalSize;
 			for (size_t index = 0; index < signalSize; index++)
 			{
-				accumulator += periodFunction((float)index / signalSize);
+				accumulator += periodFunction((float)index * step);
 				if (accumulator > 1.f)
 				{
 					accumulator -= 1.f;
