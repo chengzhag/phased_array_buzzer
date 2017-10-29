@@ -34,6 +34,9 @@
     <Filter Include="Header files\myDrivers">
       <UniqueIdentifier>{fac1dc19-4511-470e-9e5d-48fe6e1f96e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source files\myDrivers">
+      <UniqueIdentifier>{8d70d051-907a-4e3a-a862-9d19f1c5474b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
