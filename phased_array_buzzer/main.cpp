@@ -2,25 +2,31 @@
 #include <rtos.h>
 #include "myDrivers.h"
 
-DigitalOut g_LED1(LED1);
-DigitalOut g_LED2(LED2);
+//DigitalOut g_LED1(LED1);
+//DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
-PdmPeriodOutArrayDma test(PortB);
 
-uint16_t data[] = { 0x0000,0xffff,0x0000 };
 
 
 static void ThreadBody()
 {	
+	PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 10e3f);
+	BuzzerArray<16> buzzerArray(pdmPeriodOutArrayDma);
+	buzzerArray.setFrq(3);
+	//buzzerArray.setSins(1, 0);
 
-	Dma2Timer1 *dma2Timer1 = Dma2Timer1::instance(3);
-	dma2Timer1->start((uint32_t *)data, (uint32_t *)&GPIOB->ODR, 3);
+	array<float, 16> p2ps, phases;
+	sawPeriod(p2ps.begin(), p2ps.end(), 1, 1, 0);
+	sawPeriod(phases.begin(), phases.end(), 0, PI * 2, 0);
+	buzzerArray.setSins(p2ps, phases);
+
+
 
 	for (;;)
 	{
 		//g_LED1 = !g_LED1;
 		Thread::wait(500);
-		pc.printf("%d\r\n", dma2Timer1->getState());
+		//pc.printf("%d\r\n", dma->getState());
 	}
 }
 

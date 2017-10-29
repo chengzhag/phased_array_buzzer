@@ -50,7 +50,7 @@ namespace sky
 
 		for_each(
 			first, last,
-			[&i, size, min, max](auto& y) {y = (max - min)*(i++ % size) / size; }
+			[&i, size, min, max](auto& y) {y = (max - min)*(i++ % size) / size + min; }
 		);
 	}
 

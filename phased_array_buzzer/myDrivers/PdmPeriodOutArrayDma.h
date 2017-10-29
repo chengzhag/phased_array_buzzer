@@ -147,6 +147,11 @@ namespace sky
 
 			htim->Init.Prescaler = prescaler;
 			htim->Init.Period = period;
+
+			if (HAL_TIM_Base_Init(htim) != HAL_OK)
+			{
+				_Error_Handler(__FILE__, __LINE__);
+			}
 		}
 
 		virtual HAL_StatusTypeDef start(uint32_t *src, uint32_t *dst, uint16_t length) override
@@ -185,8 +190,7 @@ namespace sky
 
 		virtual void stop() override
 		{
-			__HAL_TIM_DISABLE(htim);
-			__HAL_TIM_DISABLE_DMA(htim, TIM_DMA_UPDATE);
+			HAL_TIM_Base_DeInit(htim);
 			HAL_DMA_Abort(hdma);
 		}
 
@@ -203,36 +207,73 @@ namespace sky
 	{
 	private:
 		PortOut pout;
+		GPIO_TypeDef *gpio;
 		vector<uint16_t> signal;
+		Dma2Timer1* dma;
 
-	public:
-		PdmPeriodOutArrayDma(
-			PortName port,
-			float sampleRate = 50e3f
-		) :
-			pout(port),
-			PeriodOutputArray(sampleRate)
+		GPIO_TypeDef * getGpio(PortName port)
 		{
-			//TODO：初始化时钟、dma
+			uint32_t gpio_add = 0;
+			switch (port) {
+			case PortA:
+				gpio_add = GPIOA_BASE;
+				break;
+			case PortB:
+				gpio_add = GPIOB_BASE;
+				break;
+#if defined(GPIOC_BASE)
+			case PortC:
+				gpio_add = GPIOC_BASE;
+				break;
+#endif
+#if defined GPIOD_BASE
+			case PortD:
+				gpio_add = GPIOD_BASE;
+				break;
+#endif
+#if defined GPIOE_BASE
+			case PortE:
+				gpio_add = GPIOE_BASE;
+				break;
+#endif
+#if defined GPIOF_BASE
+			case PortF:
+				gpio_add = GPIOF_BASE;
+				break;
+#endif
+#if defined GPIOG_BASE
+			case PortG:
+				gpio_add = GPIOG_BASE;
+				break;
+#endif
+#if defined GPIOH_BASE
+			case PortH:
+				gpio_add = GPIOH_BASE;
+				break;
+#endif
+#if defined GPIOI_BASE
+			case PortI:
+				gpio_add = GPIOI_BASE;
+				break;
+#endif
+#if defined GPIOJ_BASE
+			case PortJ:
+				gpio_add = GPIOJ_BASE;
+				break;
+#endif
+#if defined GPIOK_BASE
+			case PortK:
+				gpio_add = GPIOK_BASE;
+				break;
+#endif
+			default:
+				error("Pinmap error: wrong port number.");
+				break;
+			}
+			return (GPIO_TypeDef *)gpio_add;
 		}
 
-		virtual void setSampleRate(float sampleRate) override
-		{
-			PeriodOutputArray::setSampleRate(sampleRate);
-			//TODO：设置触发时钟频率
-		}
-
-
-		virtual void setSamplePoints(size_t samplePoints) override
-		{
-			PeriodOutputArray::setSamplePoints(samplePoints);
-			//TODO：暂停dma输出
-			signal.resize(samplePoints);
-			//TODO：重启dma输出
-		}
-
-
-		virtual void setSignal(function<float(float) > periodFunction, size_t n) override
+		void _setSignal(function<float(float) > periodFunction, size_t n)
 		{
 			float accumulator = 0;
 			size_t signalSize = signal.size();
@@ -251,10 +292,58 @@ namespace sky
 			}
 		}
 
+		void start()
+		{
+			dma->start((uint32_t *)signal.data(), (uint32_t *)&gpio->ODR, getSamplePoints());
+		}
+
+		void stop()
+		{
+			dma->stop();
+		}
+
+	public:
+		PdmPeriodOutArrayDma(
+			PortName port,
+			float sampleRate = 50e3f
+		) :
+			pout(port),
+			PeriodOutputArray(sampleRate),
+			dma(Dma2Timer1::instance(sampleRate)),
+			gpio(getGpio(port))
+		{
+		}
+
+		virtual void setSampleRate(float sampleRate) override
+		{
+			PeriodOutputArray::setSampleRate(sampleRate);
+			stop();
+			dma->setFrq(sampleRate);
+			start();
+		}
+
+		//设置了采样点数后必须再调用setSignal以设置输出
+		virtual void setSamplePoints(size_t samplePoints) override
+		{
+			PeriodOutputArray::setSamplePoints(samplePoints);
+			stop();
+			signal.resize(samplePoints);
+			start();
+		}
+
+		virtual void setSignal(function<float(float) > periodFunction, size_t n) override
+		{
+			stop();
+			_setSignal(periodFunction, n);
+			start();
+		}
+
 		virtual void setSignal(function<float(float)> periodFunction)
 		{
+			stop();
 			for (size_t i = 0; i < 16; i++)
-				setSignal(periodFunction, i);
+				_setSignal(periodFunction, i);
+			start();
 		}
 	};
 
