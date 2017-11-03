@@ -271,6 +271,7 @@ namespace sky
 			return (GPIO_TypeDef *)gpio_add;
 		}
 
+
 		void _setSignal(function<float(float) > periodFunction, size_t n)
 		{
 			float accumulator = 0, increase = 0;
@@ -329,6 +330,14 @@ namespace sky
 			PeriodOutputArray::setSamplePoints(samplePoints);
 			stop();
 			signal.resize(samplePoints);
+			start();
+		}
+
+		virtual void setSignal(function<float(float, size_t) > periodFunction) override
+		{
+			stop();
+			for (size_t i = 0; i < 16; i++)
+				_setSignal([i, periodFunction](float x) {return periodFunction(x, i); }, i);
 			start();
 		}
 

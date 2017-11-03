@@ -40,8 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mbed.mak">
@@ -1414,15 +1412,6 @@
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
     <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PdmPeriodOutArraySoft.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PwmPeriodOutArrayDma.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PwmPeriodOutArraySoft.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
     <ClInclude Include="myDrivers\PeriodOutArray.h">

@@ -1,9 +1,6 @@
 #pragma once
 
 #include "PeriodOutArray.h"
-#include "PwmPeriodOutArraySoft.h"
-#include "PdmPeriodOutArraySoft.h"
-#include "PwmPeriodOutArrayDma.h"
 #include "PdmPeriodOutArrayDma.h"
 #include "PeriodicSignal.h"
 #include "BuzzerArray.h"

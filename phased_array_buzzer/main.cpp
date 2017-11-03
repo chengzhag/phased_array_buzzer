@@ -10,17 +10,17 @@ Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
 static void ThreadBody()
 {	
-	PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 2.4e6);
+	PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 1e3);
 	BuzzerArray<16> buzzerArray(pdmPeriodOutArrayDma);
-	buzzerArray.setFrq(20e3);
+	buzzerArray.setFrq(1);
 	buzzerArray.setSins(1, 0);
 
-	/*
-	array<float, 16> p2ps, phases;
-	sawPeriod(p2ps.begin(), p2ps.end(), 1, 1, 0);
-	sawPeriod(phases.begin(), phases.end(), 0, PI, 0);
-	buzzerArray.setSins(p2ps, phases);
-	*/
+
+	//array<float, 16> p2ps, phases;
+	//sawPeriod(p2ps.begin(), p2ps.end(), 1, 1, 0);
+	//sawPeriod(phases.begin(), phases.end(), 0, PI, 0);
+	//buzzerArray.setSins(p2ps, phases);
+
 
 
 	for (;;)

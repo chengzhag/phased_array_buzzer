@@ -85,14 +85,9 @@
     <ClInclude Include="myDrivers\myDrivers.h" />
     <ClInclude Include="myDrivers\myMath.h" />
     <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h" />
-    <ClInclude Include="myDrivers\PdmPeriodOutArraySoft.h" />
     <ClInclude Include="myDrivers\PeriodicSignal.h" />
     <ClInclude Include="myDrivers\PeriodOutArray.h" />
-    <ClInclude Include="myDrivers\PwmPeriodOutArrayDma.h" />
-    <ClInclude Include="myDrivers\PwmPeriodOutArraySoft.h" />
     <ClInclude Include="myDrivers\TicToc.h" />
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="mbed.mak" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_gpio.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_lp_ticker_api.c" />

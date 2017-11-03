@@ -58,6 +58,7 @@ namespace sky
 		//n
 		//);
 		virtual void setSignal(function<float(float)> periodFunction, size_t n) = 0;
+		virtual void setSignal(function<float(float, size_t)> periodFunction) = 0;
 
 	};
 
