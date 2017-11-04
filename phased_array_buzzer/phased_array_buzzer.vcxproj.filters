@@ -1405,9 +1405,6 @@
     <ClInclude Include="myDrivers\Frqer.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
-    <ClInclude Include="myDrivers\BuzzerArray.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
     <ClInclude Include="myDrivers\TicToc.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
@@ -1418,6 +1415,9 @@
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
     <ClInclude Include="myDrivers\myMath.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\SpeakerArray.h">
       <Filter>Header files\myDrivers</Filter>
     </ClInclude>
   </ItemGroup>

@@ -80,7 +80,7 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClInclude Include="myDrivers\BuzzerArray.h" />
+    <ClInclude Include="myDrivers\SpeakerArray.h" />
     <ClInclude Include="myDrivers\Frqer.h" />
     <ClInclude Include="myDrivers\myDrivers.h" />
     <ClInclude Include="myDrivers\myMath.h" />

@@ -12,7 +12,7 @@ namespace sky
 
 	//阵列蜂鸣器，单独控制相位、幅度
 	template<size_t ArraySize>
-	class BuzzerArray
+	class SpeakerArray
 	{
 	protected:
 		PeriodOutputArray *outputs;
@@ -26,7 +26,7 @@ namespace sky
 			);
 		}
 	public:
-		BuzzerArray(
+		SpeakerArray(
 			PeriodOutputArray &outputs
 		) :
 			outputs(&outputs)
@@ -89,9 +89,13 @@ namespace sky
 		}
 
 		//设置正弦信号频率
-		void setFrq(float frq)
+		void setFrq_withoutChangingSampleRate(float frq)
 		{
 			setPointsAndRefresh(outputs->getSampleRate() / frq);
+		}
+		void setFrq_byChangingSampleRate(float frq)
+		{
+			outputs->setSampleRate(outputs->getSamplePoints()*frq);
 		}
 
 		//设置采样速率

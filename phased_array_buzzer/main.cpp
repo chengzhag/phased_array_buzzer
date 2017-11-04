@@ -11,8 +11,8 @@ Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 static void ThreadBody()
 {	
 	PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 1e3);
-	BuzzerArray<16> buzzerArray(pdmPeriodOutArrayDma);
-	buzzerArray.setFrq(1);
+	SpeakerArray<16> buzzerArray(pdmPeriodOutArrayDma);
+	buzzerArray.setFrq_withoutChangingSampleRate(1);
 	buzzerArray.setSins(1, 0);
 
 
@@ -22,11 +22,19 @@ static void ThreadBody()
 	//buzzerArray.setSins(p2ps, phases);
 
 
-
+	float frq = 1, inc = 0.01;
 	for (;;)
 	{
+		frq += inc;
+		if (frq >= 5|| frq <= 1)
+		{
+			inc = -inc;
+		}
+
+		buzzerArray.setFrq_byChangingSampleRate(frq);
+
 		//g_LED1 = !g_LED1;
-		Thread::wait(500);
+		Thread::wait(10);
 		//pc.printf("%d\r\n", dma->getState());
 	}
 }

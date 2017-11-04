@@ -80,8 +80,8 @@ namespace sky
 			TIM_ClockConfigTypeDef sClockSourceConfig;
 			TIM_MasterConfigTypeDef sMasterConfig;
 
-			setFrq(frq);
 			htim->Instance = TIM1;
+			setFrq(frq);
 			htim->Init.CounterMode = TIM_COUNTERMODE_UP;
 			htim->Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 			htim->Init.RepetitionCounter = 0;
@@ -135,7 +135,7 @@ namespace sky
 			return instance;
 		}
 
-		//设置频率，重启生效
+		//设置频率
 		virtual void setFrq(float frq) override
 		{
 			//计算Prescaler和Period
@@ -146,10 +146,8 @@ namespace sky
 			htim->Init.Prescaler = psc;
 			htim->Init.Period = period;
 
-			if (HAL_TIM_Base_Init(htim) != HAL_OK)
-			{
-				_Error_Handler(__FILE__, __LINE__);
-			}
+			htim->Instance->PSC = psc;
+			htim->Instance->ARR = period;
 		}
 
 		virtual HAL_StatusTypeDef start(uint32_t *src, uint32_t *dst, uint16_t length) override
@@ -319,9 +317,7 @@ namespace sky
 		virtual void setSampleRate(float sampleRate) override
 		{
 			PeriodOutputArray::setSampleRate(sampleRate);
-			stop();
 			dma->setFrq(sampleRate);
-			start();
 		}
 
 		//设置了采样点数后必须再调用setSignal以设置输出
