@@ -6,15 +6,29 @@
 //DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
+PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 80e3);
+SpeakerArray<16> buzzerArray(pdmPeriodOutArrayDma);
+Ticker fmcwTask;
 
+static void fmcwBody()
+{
+	static float frq = 20e3, inc = 2;
+
+	frq += inc;
+	if (frq >= 22e3 /*|| frq <= 20e3*/)
+	{
+		frq = 20e3;
+	}
+
+	buzzerArray.setFrq_byChangingSampleRate(frq);
+}
 
 static void ThreadBody()
 {	
-	PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 1e3);
-	SpeakerArray<16> buzzerArray(pdmPeriodOutArrayDma);
-	buzzerArray.setFrq_withoutChangingSampleRate(1);
+	buzzerArray.setFrq_withoutChangingSampleRate(20e3);
 	buzzerArray.setSins(1, 0);
 
+	fmcwTask.attach_us(callback(fmcwBody), 500);
 
 	//array<float, 16> p2ps, phases;
 	//sawPeriod(p2ps.begin(), p2ps.end(), 1, 1, 0);
@@ -22,20 +36,20 @@ static void ThreadBody()
 	//buzzerArray.setSins(p2ps, phases);
 
 
-	float frq = 1, inc = 0.01;
+	//float frq = 20e3, inc = 10;
 	for (;;)
 	{
-		frq += inc;
-		if (frq >= 5|| frq <= 1)
-		{
-			inc = -inc;
-		}
+		//frq += inc;
+		//if (frq >= 24e3 || frq <= 20e3)
+		//{
+		//	inc = -inc;
+		//}
 
-		buzzerArray.setFrq_byChangingSampleRate(frq);
+		//buzzerArray.setFrq_byChangingSampleRate(frq);
 
-		//g_LED1 = !g_LED1;
-		Thread::wait(10);
-		//pc.printf("%d\r\n", dma->getState());
+		////g_LED1 = !g_LED1;
+		//Thread::wait(1);
+		////pc.printf("%d\r\n", dma->getState());
 	}
 }
 
