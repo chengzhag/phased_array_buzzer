@@ -7,7 +7,7 @@
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
 PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 80e3);
-SpeakerArray<16> buzzerArray(pdmPeriodOutArrayDma);
+SpeakerArray<16> speakerArray(pdmPeriodOutArrayDma);
 Ticker fmcwTask;
 
 static void fmcwBody()
@@ -20,13 +20,15 @@ static void fmcwBody()
 		frq = 20e3;
 	}
 
-	buzzerArray.setFrq_byChangingSampleRate(frq);
+	speakerArray.setFrq_byChangingSampleRate(frq);
 }
 
 static void ThreadBody()
 {	
-	buzzerArray.setFrq_withoutChangingSampleRate(20e3);
-	buzzerArray.setSins(1, 0);
+	Timer timer;
+	
+	speakerArray.setFrq_byChangingSamplePoints(20e3);
+	speakerArray.setSins(1, 0);
 
 	fmcwTask.attach_us(callback(fmcwBody), 500);
 

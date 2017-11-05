@@ -1,9 +1,9 @@
 #pragma once
 #include "mbed.h"
+#include "dsp.h"
 #include <array>
 #include <algorithm>
 
-#include "PeriodicSignal.h"
 #include "Frqer.h"
 
 namespace sky
@@ -22,7 +22,7 @@ namespace sky
 		void refreshSignal()
 		{
 			outputs->setSignal(
-				[this](float x, size_t i) {return float(this->p2ps[i] * 0.5* sin(2 * PI *x + this->phases[i]) + 0.5); }
+				[this](float x, size_t i) {return float(this->p2ps[i] * 0.5* arm_sin_f32(2 * PI *x + this->phases[i]) + 0.5); }
 			);
 		}
 	public:
@@ -89,7 +89,7 @@ namespace sky
 		}
 
 		//设置正弦信号频率
-		void setFrq_withoutChangingSampleRate(float frq)
+		void setFrq_byChangingSamplePoints(float frq)
 		{
 			setPointsAndRefresh(outputs->getSampleRate() / frq);
 		}

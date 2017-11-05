@@ -36,7 +36,7 @@ error:
 	$(error Invalid configuration, please check your inputs)
 endif
 
-SOURCEFILES := main.cpp $(BSP_ROOT)/hal/mbed_gpio.c $(BSP_ROOT)/hal/mbed_lp_ticker_api.c $(BSP_ROOT)/hal/mbed_pinmap_common.c $(BSP_ROOT)/hal/mbed_ticker_api.c $(BSP_ROOT)/hal/mbed_us_ticker_api.c $(BSP_ROOT)/platform/mbed_application.c $(BSP_ROOT)/platform/mbed_assert.c $(BSP_ROOT)/platform/mbed_board.c $(BSP_ROOT)/platform/mbed_critical.c $(BSP_ROOT)/platform/mbed_error.c $(BSP_ROOT)/platform/mbed_interface.c $(BSP_ROOT)/platform/mbed_mem_trace.c $(BSP_ROOT)/platform/mbed_semihost_api.c $(BSP_ROOT)/platform/mbed_stats.c $(BSP_ROOT)/platform/mbed_wait_api_no_rtos.c $(BSP_ROOT)/stubs.cpp $(BSP_ROOT)/drivers/AnalogIn.cpp $(BSP_ROOT)/drivers/BusIn.cpp $(BSP_ROOT)/drivers/BusInOut.cpp $(BSP_ROOT)/drivers/BusOut.cpp $(BSP_ROOT)/drivers/CAN.cpp $(BSP_ROOT)/drivers/Ethernet.cpp $(BSP_ROOT)/drivers/FlashIAP.cpp $(BSP_ROOT)/drivers/I2C.cpp $(BSP_ROOT)/drivers/I2CSlave.cpp $(BSP_ROOT)/drivers/InterruptIn.cpp $(BSP_ROOT)/drivers/InterruptManager.cpp $(BSP_ROOT)/drivers/RawSerial.cpp $(BSP_ROOT)/drivers/Serial.cpp $(BSP_ROOT)/drivers/SerialBase.cpp $(BSP_ROOT)/drivers/SPI.cpp $(BSP_ROOT)/drivers/SPISlave.cpp $(BSP_ROOT)/drivers/Ticker.cpp $(BSP_ROOT)/drivers/Timeout.cpp $(BSP_ROOT)/drivers/Timer.cpp $(BSP_ROOT)/drivers/TimerEvent.cpp $(BSP_ROOT)/platform/CallChain.cpp $(BSP_ROOT)/platform/FileBase.cpp $(BSP_ROOT)/platform/FilePath.cpp $(BSP_ROOT)/platform/FileSystemLike.cpp $(BSP_ROOT)/platform/LocalFileSystem.cpp $(BSP_ROOT)/platform/mbed_alloc_wrappers.cpp $(BSP_ROOT)/platform/mbed_retarget.cpp $(BSP_ROOT)/platform/mbed_rtc_time.cpp $(BSP_ROOT)/platform/mbed_wait_api_rtos.cpp $(BSP_ROOT)/platform/Stream.cpp $(BSP_ROOT)/targets/TARGET_STM/can_api.c $(BSP_ROOT)/targets/TARGET_STM/gpio_api.c $(BSP_ROOT)/targets/TARGET_STM/gpio_irq_api.c $(BSP_ROOT)/targets/TARGET_STM/hal_tick_16b.c $(BSP_ROOT)/targets/TARGET_STM/hal_tick_32b.c $(BSP_ROOT)/targets/TARGET_STM/i2c_api.c $(BSP_ROOT)/targets/TARGET_STM/lp_ticker.c $(BSP_ROOT)/targets/TARGET_STM/pinmap.c $(BSP_ROOT)/targets/TARGET_STM/port_api.c $(BSP_ROOT)/targets/TARGET_STM/pwmout_api.c $(BSP_ROOT)/targets/TARGET_STM/rtc_api.c $(BSP_ROOT)/targets/TARGET_STM/sleep.c $(BSP_ROOT)/targets/TARGET_STM/stm_spi_api.c $(BSP_ROOT)/targets/TARGET_STM/trng_api.c $(BSP_ROOT)/targets/TARGET_STM/us_ticker_16b.c $(BSP_ROOT)/targets/TARGET_STM/us_ticker_32b.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/analogin_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/analogout_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/gpio_irq_device.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/mbed_overrides.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/pwmout_device.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/serial_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/spi_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_adc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_adc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_can.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cec.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cortex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_crc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_crc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cryp.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cryp_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dac.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dac_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dcmi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dcmi_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dfsdm.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dma.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dma2d.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dma_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dsi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_eth.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_flash.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_flash_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_gpio.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_hash.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_hash_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_hcd.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_i2c.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_i2c_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_i2s.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_irda.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_iwdg.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_jpeg.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_lptim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_ltdc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_ltdc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_mdios.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_mmc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_nand.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_nor.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pcd.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pcd_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pwr.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pwr_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_qspi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rcc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rcc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rng.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rtc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rtc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sai.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sai_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sd.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sdram.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_smartcard.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_smartcard_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_smbus.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_spdifrx.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_spi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sram.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_tim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_tim_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_uart.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_usart.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_wwdg.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_adc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_crc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_dac.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_dma.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_dma2d.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_exti.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_fmc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_gpio.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_i2c.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_lptim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_pwr.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_rcc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_rng.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_rtc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_sdmmc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_spi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_tim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_usart.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_usb.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_utils.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/device/cmsis_nvic.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/TARGET_NUCLEO_F767ZI/PeripheralPins.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/TARGET_NUCLEO_F767ZI/system_stm32f7xx.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/device/TOOLCHAIN_GCC_ARM/startup_stm32f769xx.s $(BSP_ROOT)/rtos/rtos_idle.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/HAL_CM.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/RTX_Conf_CM.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_CMSIS.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Event.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_List.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Mailbox.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_MemBox.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Memory.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Mutex.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_OsEventObserver.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Robin.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Semaphore.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_System.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Task.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Time.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Timer.c $(BSP_ROOT)/rtos/Mutex.cpp $(BSP_ROOT)/rtos/RtosTimer.cpp $(BSP_ROOT)/rtos/Semaphore.cpp $(BSP_ROOT)/rtos/Thread.cpp $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/HAL_CM4.S $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/SVC_Table.S
+SOURCEFILES := main.cpp $(BSP_ROOT)/hal/mbed_gpio.c $(BSP_ROOT)/hal/mbed_lp_ticker_api.c $(BSP_ROOT)/hal/mbed_pinmap_common.c $(BSP_ROOT)/hal/mbed_ticker_api.c $(BSP_ROOT)/hal/mbed_us_ticker_api.c $(BSP_ROOT)/platform/mbed_application.c $(BSP_ROOT)/platform/mbed_assert.c $(BSP_ROOT)/platform/mbed_board.c $(BSP_ROOT)/platform/mbed_critical.c $(BSP_ROOT)/platform/mbed_error.c $(BSP_ROOT)/platform/mbed_interface.c $(BSP_ROOT)/platform/mbed_mem_trace.c $(BSP_ROOT)/platform/mbed_semihost_api.c $(BSP_ROOT)/platform/mbed_stats.c $(BSP_ROOT)/platform/mbed_wait_api_no_rtos.c $(BSP_ROOT)/stubs.cpp $(BSP_ROOT)/drivers/AnalogIn.cpp $(BSP_ROOT)/drivers/BusIn.cpp $(BSP_ROOT)/drivers/BusInOut.cpp $(BSP_ROOT)/drivers/BusOut.cpp $(BSP_ROOT)/drivers/CAN.cpp $(BSP_ROOT)/drivers/Ethernet.cpp $(BSP_ROOT)/drivers/FlashIAP.cpp $(BSP_ROOT)/drivers/I2C.cpp $(BSP_ROOT)/drivers/I2CSlave.cpp $(BSP_ROOT)/drivers/InterruptIn.cpp $(BSP_ROOT)/drivers/InterruptManager.cpp $(BSP_ROOT)/drivers/RawSerial.cpp $(BSP_ROOT)/drivers/Serial.cpp $(BSP_ROOT)/drivers/SerialBase.cpp $(BSP_ROOT)/drivers/SPI.cpp $(BSP_ROOT)/drivers/SPISlave.cpp $(BSP_ROOT)/drivers/Ticker.cpp $(BSP_ROOT)/drivers/Timeout.cpp $(BSP_ROOT)/drivers/Timer.cpp $(BSP_ROOT)/drivers/TimerEvent.cpp $(BSP_ROOT)/platform/CallChain.cpp $(BSP_ROOT)/platform/FileBase.cpp $(BSP_ROOT)/platform/FilePath.cpp $(BSP_ROOT)/platform/FileSystemLike.cpp $(BSP_ROOT)/platform/LocalFileSystem.cpp $(BSP_ROOT)/platform/mbed_alloc_wrappers.cpp $(BSP_ROOT)/platform/mbed_retarget.cpp $(BSP_ROOT)/platform/mbed_rtc_time.cpp $(BSP_ROOT)/platform/mbed_wait_api_rtos.cpp $(BSP_ROOT)/platform/Stream.cpp $(BSP_ROOT)/targets/TARGET_STM/can_api.c $(BSP_ROOT)/targets/TARGET_STM/gpio_api.c $(BSP_ROOT)/targets/TARGET_STM/gpio_irq_api.c $(BSP_ROOT)/targets/TARGET_STM/hal_tick_16b.c $(BSP_ROOT)/targets/TARGET_STM/hal_tick_32b.c $(BSP_ROOT)/targets/TARGET_STM/i2c_api.c $(BSP_ROOT)/targets/TARGET_STM/lp_ticker.c $(BSP_ROOT)/targets/TARGET_STM/pinmap.c $(BSP_ROOT)/targets/TARGET_STM/port_api.c $(BSP_ROOT)/targets/TARGET_STM/pwmout_api.c $(BSP_ROOT)/targets/TARGET_STM/rtc_api.c $(BSP_ROOT)/targets/TARGET_STM/sleep.c $(BSP_ROOT)/targets/TARGET_STM/stm_spi_api.c $(BSP_ROOT)/targets/TARGET_STM/trng_api.c $(BSP_ROOT)/targets/TARGET_STM/us_ticker_16b.c $(BSP_ROOT)/targets/TARGET_STM/us_ticker_32b.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/analogin_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/analogout_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/gpio_irq_device.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/mbed_overrides.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/pwmout_device.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/serial_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/spi_api.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_adc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_adc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_can.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cec.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cortex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_crc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_crc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cryp.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_cryp_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dac.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dac_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dcmi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dcmi_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dfsdm.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dma.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dma2d.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dma_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_dsi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_eth.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_flash.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_flash_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_gpio.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_hash.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_hash_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_hcd.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_i2c.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_i2c_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_i2s.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_irda.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_iwdg.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_jpeg.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_lptim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_ltdc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_ltdc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_mdios.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_mmc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_nand.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_nor.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pcd.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pcd_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pwr.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_pwr_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_qspi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rcc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rcc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rng.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rtc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_rtc_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sai.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sai_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sd.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sdram.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_smartcard.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_smartcard_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_smbus.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_spdifrx.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_spi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_sram.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_tim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_tim_ex.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_uart.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_usart.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_hal_wwdg.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_adc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_crc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_dac.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_dma.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_dma2d.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_exti.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_fmc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_gpio.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_i2c.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_lptim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_pwr.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_rcc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_rng.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_rtc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_sdmmc.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_spi.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_tim.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_usart.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_usb.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/device/stm32f7xx_ll_utils.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/device/cmsis_nvic.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/TARGET_NUCLEO_F767ZI/PeripheralPins.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/TARGET_NUCLEO_F767ZI/system_stm32f7xx.c $(BSP_ROOT)/targets/TARGET_STM/TARGET_STM32F7/TARGET_STM32F767xI/device/TOOLCHAIN_GCC_ARM/startup_stm32f769xx.s $(BSP_ROOT)/rtos/rtos_idle.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/HAL_CM.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/RTX_Conf_CM.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_CMSIS.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Event.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_List.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Mailbox.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_MemBox.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Memory.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Mutex.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_OsEventObserver.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Robin.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Semaphore.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_System.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Task.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Time.c $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/rt_Timer.c $(BSP_ROOT)/rtos/Mutex.cpp $(BSP_ROOT)/rtos/RtosTimer.cpp $(BSP_ROOT)/rtos/Semaphore.cpp $(BSP_ROOT)/rtos/Thread.cpp $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/HAL_CM4.S $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/SVC_Table.S $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_shift_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_shift_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_shift_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/CommonTables/arm_common_tables.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/CommonTables/arm_const_structs.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_conj_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_conj_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_conj_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_dot_prod_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_dot_prod_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_dot_prod_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_cmplx_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_cmplx_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_cmplx_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_real_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_real_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_real_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_reset_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_reset_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_reset_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_sin_cos_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_sin_cos_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_cos_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_cos_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_cos_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sin_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sin_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sin_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sqrt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sqrt_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_32x64_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_32x64_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_f64.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_init_f64.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_stereo_df2T_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_stereo_df2T_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_fast_opt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_opt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_opt_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_fast_opt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_opt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_opt_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_opt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_opt_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_opt_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_add_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_add_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_add_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_cmplx_mult_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_cmplx_mult_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_cmplx_mult_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_inverse_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_inverse_f64.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_fast_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_fast_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_scale_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_scale_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_scale_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_trans_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_trans_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_trans_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_rms_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_rms_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_rms_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_std_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_std_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_std_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_var_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_var_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_var_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_float_to_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_float_to_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_float_to_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q15_to_float.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q15_to_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q15_to_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q31_to_float.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q31_to_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q31_to_q7.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q7_to_float.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q7_to_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q7_to_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/math_helper.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_bitreversal.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix8_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_fast_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_fast_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_init_f32.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_init_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_init_q31.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_q15.c $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_q31.c $(BSP_ROOT)/features/unsupported/dsp/dsp/Sine_f32.cpp
 EXTERNAL_LIBS := 
 EXTERNAL_LIBS_COPIED := $(foreach lib, $(EXTERNAL_LIBS),$(BINARYDIR)/$(notdir $(lib)))
 
@@ -900,4 +900,1096 @@ $(BINARYDIR)/HAL_CM4.o : $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/
 
 $(BINARYDIR)/SVC_Table.o : $(BSP_ROOT)/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/SVC_Table.S $(all_make_files) |$(BINARYDIR)
 	$(CC) $(CFLAGS) $(ASFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_abs_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_abs_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_abs_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_abs_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_abs_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_add_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_add_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_add_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_add_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_add_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dot_prod_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dot_prod_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dot_prod_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dot_prod_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_dot_prod_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mult_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mult_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mult_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mult_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_mult_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_negate_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_negate_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_negate_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_negate_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_negate_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_offset_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_offset_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_offset_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_offset_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_offset_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_scale_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_scale_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_scale_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_scale_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_scale_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_shift_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_shift_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_shift_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_shift_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_shift_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_shift_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sub_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sub_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sub_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sub_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/BasicMathFunctions/arm_sub_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_common_tables.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/CommonTables/arm_common_tables.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_const_structs.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/CommonTables/arm_const_structs.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_conj_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_conj_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_conj_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_conj_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_conj_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_conj_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_dot_prod_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_dot_prod_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_dot_prod_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_dot_prod_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_dot_prod_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_dot_prod_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mag_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mag_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mag_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mag_squared_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mag_squared_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mag_squared_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mult_cmplx_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_cmplx_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mult_cmplx_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_cmplx_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mult_cmplx_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_cmplx_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mult_real_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_real_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mult_real_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_real_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cmplx_mult_real_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mult_real_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_pid_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_pid_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_pid_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_pid_reset_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_reset_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_pid_reset_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_reset_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_pid_reset_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_pid_reset_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sin_cos_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_sin_cos_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sin_cos_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/ControllerFunctions/arm_sin_cos_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cos_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_cos_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cos_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_cos_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cos_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_cos_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sin_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sin_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sin_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sin_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sin_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sin_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sqrt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sqrt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_sqrt_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FastMathFunctions/arm_sqrt_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_32x64_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_32x64_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_32x64_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_32x64_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df1_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df1_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df2T_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df2T_f64.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_f64.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df2T_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_df2T_init_f64.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_df2T_init_f64.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_stereo_df2T_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_stereo_df2T_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_biquad_cascade_stereo_df2T_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_biquad_cascade_stereo_df2T_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_fast_opt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_fast_opt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_opt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_opt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_opt_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_opt_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_fast_opt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_fast_opt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_opt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_opt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_opt_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_opt_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_partial_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_conv_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_conv_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_fast_opt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_opt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_opt_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_opt_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_opt_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_opt_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_correlate_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_correlate_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_decimate_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_decimate_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_init_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_init_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_interpolate_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_interpolate_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_interpolate_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_interpolate_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_interpolate_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_interpolate_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_interpolate_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_lattice_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_lattice_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_lattice_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_lattice_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_lattice_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_lattice_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_lattice_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_init_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_init_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fir_sparse_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_fir_sparse_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_iir_lattice_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_iir_lattice_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_iir_lattice_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_iir_lattice_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_iir_lattice_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_iir_lattice_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_iir_lattice_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_norm_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_norm_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_norm_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_norm_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_norm_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_norm_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_norm_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_lms_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/FilteringFunctions/arm_lms_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_add_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_add_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_add_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_add_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_add_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_add_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_cmplx_mult_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_cmplx_mult_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_cmplx_mult_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_cmplx_mult_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_cmplx_mult_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_cmplx_mult_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_inverse_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_inverse_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_inverse_f64.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_inverse_f64.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_mult_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_mult_fast_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_fast_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_mult_fast_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_fast_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_mult_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_mult_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_mult_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_scale_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_scale_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_scale_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_scale_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_scale_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_scale_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_sub_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_sub_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_sub_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_trans_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_trans_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_trans_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_trans_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mat_trans_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/MatrixFunctions/arm_mat_trans_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_max_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_max_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_max_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_max_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_max_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mean_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mean_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mean_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_mean_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_mean_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_min_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_min_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_min_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_min_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_min_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_power_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_power_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_power_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_power_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_power_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rms_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_rms_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rms_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_rms_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rms_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_rms_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_std_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_std_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_std_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_std_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_std_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_std_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_var_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_var_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_var_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_var_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_var_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/StatisticsFunctions/arm_var_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_copy_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_copy_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_copy_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_copy_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_copy_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fill_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fill_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fill_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_fill_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_fill_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_float_to_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_float_to_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_float_to_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_float_to_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_float_to_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_float_to_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q15_to_float.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q15_to_float.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q15_to_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q15_to_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q15_to_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q15_to_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q31_to_float.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q31_to_float.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q31_to_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q31_to_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q31_to_q7.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q31_to_q7.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q7_to_float.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q7_to_float.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q7_to_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q7_to_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_q7_to_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/arm_q7_to_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/math_helper.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/SupportFunctions/math_helper.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_bitreversal.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_bitreversal.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix2_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix2_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix2_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix2_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix2_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix2_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix2_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix4_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix4_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix4_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix4_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix4_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix4_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix4_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_cfft_radix8_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_cfft_radix8_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dct4_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dct4_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dct4_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dct4_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dct4_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_dct4_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_dct4_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_fast_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_fast_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_fast_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_fast_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_init_f32.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_init_f32.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_init_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_init_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_init_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_init_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_q15.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_q15.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/arm_rfft_q31.o : $(BSP_ROOT)/features/unsupported/dsp/cmsis_dsp/TransformFunctions/arm_rfft_q31.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/Sine_f32.o : $(BSP_ROOT)/features/unsupported/dsp/dsp/Sine_f32.cpp $(all_make_files) |$(BINARYDIR)
+	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
 

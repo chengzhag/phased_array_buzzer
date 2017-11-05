@@ -1,6 +1,6 @@
 #pragma once
 #include <limits>
-#include <arm_math.h>
+#include "dsp.h"
 #include <algorithm>
 
 namespace sky
@@ -27,7 +27,7 @@ namespace sky
 			first, last,
 			[&i, size, p2p, bias](auto& y) {
 			y = p2p * 0.5
-				* sin(2 * PI *(i++ % size) / size)
+				* arm_sin_f32(2 * PI *(i++ % size) / size)
 				+ bias;
 		});
 	}

@@ -6,7 +6,7 @@ BINARYDIR := Release
 
 #Additional flags
 PREPROCESSOR_MACROS := NDEBUG=1 RELEASE=1
-INCLUDE_DIRS := 
+INCLUDE_DIRS := C:/Users/Sky/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.mbed/features/unsupported/dsp/cmsis_dsp C:/Users/Sky/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.mbed/features/unsupported/dsp/dsp
 LIBRARY_DIRS := 
 LIBRARY_NAMES := 
 ADDITIONAL_LINKER_INPUTS := 
