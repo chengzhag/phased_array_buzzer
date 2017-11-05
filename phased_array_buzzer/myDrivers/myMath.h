@@ -7,7 +7,7 @@ namespace sky
 	using namespace std;
 
 	template<typename T>
-	void limit(T &x, T min, T max)
+	inline void limit(T &x, T min, T max)
 	{
 		if (x < min)
 		{
@@ -20,7 +20,7 @@ namespace sky
 	}
 
 	template<typename T>
-	void limitLow(T &x, T min)
+	inline void limitLow(T &x, T min)
 	{
 		if (x < min)
 		{
@@ -29,7 +29,7 @@ namespace sky
 	}
 
 	template<typename T>
-	void limitHigh(T &x, T max)
+	inline void limitHigh(T &x, T max)
 	{
 		if (x > max)
 		{
