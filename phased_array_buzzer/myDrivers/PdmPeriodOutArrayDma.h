@@ -272,7 +272,7 @@ namespace sky
 
 		void _setSignal(function<float(float) > periodFunction, size_t n)
 		{
-			float accumulator = 0, increase = 0;
+			float accumulator = 0.5, increase = 0;
 			size_t signalSize = signal.size();
 			float step = 1 / (float)signalSize;
 			for (size_t index = 0; index < signalSize; index++)

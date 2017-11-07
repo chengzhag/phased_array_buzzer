@@ -6,7 +6,7 @@
 //DigitalOut g_LED2(LED2);
 Serial pc(SERIAL_TX, SERIAL_RX, 115200);
 
-PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 80e3);
+PdmPeriodOutArrayDma pdmPeriodOutArrayDma(PortB, 800e3);
 SpeakerArray<16> speakerArray(pdmPeriodOutArrayDma);
 Ticker fmcwTask;
 
@@ -30,7 +30,7 @@ static void ThreadBody()
 	speakerArray.setFrq_byChangingSamplePoints(20e3);
 	speakerArray.setSins(1, 0);
 
-	fmcwTask.attach_us(callback(fmcwBody), 500);
+	fmcwTask.attach_us(callback(fmcwBody), 5000);
 
 	//array<float, 16> p2ps, phases;
 	//sawPeriod(p2ps.begin(), p2ps.end(), 1, 1, 0);
