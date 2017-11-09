@@ -534,6 +534,7 @@
     <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h" />
     <None Include="Makefile" />
     <None Include="debug.mak" />
+    <None Include="myDrivers\SpeakerArray.cd" />
     <None Include="release.mak" />
     <None Include="phased_array_buzzer-Debug.vgdbsettings" />
     <None Include="phased_array_buzzer-Release.vgdbsettings" />

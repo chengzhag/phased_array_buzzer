@@ -118,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
+    <None Include="myDrivers\SpeakerArray.cd">
+      <Filter>Source files\myDrivers</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="mbed.mak">

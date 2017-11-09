@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sky::SpeakerArray&lt;ArraySize&gt;">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIAAAAACAAAAAAgJAAAAAAAAAAAAAAAAREAAQQAEA=</HashCode>
+      <FileName>myDrivers\SpeakerArray.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="outputs" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="sky::PeriodOutputArray">
+    <Position X="4" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAgAAAAAgAgAIAAAAAAAAAIAAAAAAAAAAAAEA=</HashCode>
+      <FileName>myDrivers\PeriodOutArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sky::Dma" Collapsed="true">
+    <Position X="1" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAggAAAAAgAAAAAAAAAAAgAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>myDrivers\PdmPeriodOutArrayDma.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sky::DmaTimer" Collapsed="true">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgAACAAAAAAA=</HashCode>
+      <FileName>myDrivers\PdmPeriodOutArrayDma.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sky::Dma2Timer1" Collapsed="true">
+    <Position X="1" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAkAAgAAAQAAAAAABgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>myDrivers\PdmPeriodOutArrayDma.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sky::PdmPeriodOutArrayDma">
+    <Position X="4" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAggEBAAAAAAAAgIAgCEAAAAAAAAEQ=</HashCode>
+      <FileName>myDrivers\PdmPeriodOutArrayDma.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dma" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
