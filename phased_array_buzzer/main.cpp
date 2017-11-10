@@ -15,7 +15,7 @@ static void fmcwBody()
 	static float frq = 20e3, inc = 2;
 
 	frq += inc;
-	if (frq >= 22e3 /*|| frq <= 20e3*/)
+	if (frq >= 28e3 /*|| frq <= 20e3*/)
 	{
 		frq = 20e3;
 	}
@@ -30,7 +30,7 @@ static void ThreadBody()
 	speakerArray.setFrq_byChangingSamplePoints(20e3);
 	speakerArray.setSins(1, 0);
 
-	fmcwTask.attach_us(callback(fmcwBody), 5000);
+	fmcwTask.attach_us(callback(fmcwBody), 100);
 
 	//array<float, 16> p2ps, phases;
 	//sawPeriod(p2ps.begin(), p2ps.end(), 1, 1, 0);
