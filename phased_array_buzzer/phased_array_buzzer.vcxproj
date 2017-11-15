@@ -80,6 +80,8 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClInclude Include="myDrivers\myDfsdm.h" />
+    <ClInclude Include="myDrivers\myDma.h" />
     <ClInclude Include="myDrivers\SpeakerArray.h" />
     <ClInclude Include="myDrivers\Frqer.h" />
     <ClInclude Include="myDrivers\myDrivers.h" />
