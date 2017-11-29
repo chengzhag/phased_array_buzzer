@@ -9,27 +9,15 @@
     <MainSourceDirectory>$(ProjectDir)</MainSourceDirectory>
     <EmbeddedProfileFile>mbed.xml</EmbeddedProfileFile>
   </Project>
-  <Build xsi:type="com.visualgdb.build.embedded">
+  <Build xsi:type="com.visualgdb.build.msbuild">
     <ToolchainID>
       <Version>
         <Revision>0</Revision>
       </Version>
     </ToolchainID>
-    <MakeFilePathRelativeToSourceDir>Makefile</MakeFilePathRelativeToSourceDir>
-    <MakeConfigurationName>Release</MakeConfigurationName>
-    <AdditionalMakeArguments>$(LocalMultiThreadedBuildFlags)</AdditionalMakeArguments>
-    <MakeCommandTemplate>
-      <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
-      <RemoteHost>
-        <HostName>BuildMachine</HostName>
-        <Transport>BuiltinShortcut</Transport>
-      </RemoteHost>
-      <Command>$(ToolchainMake)</Command>
-      <Arguments>$(ToolchainMakeArgs)</Arguments>
-      <WorkingDirectory>$(BuildDir)</WorkingDirectory>
-      <BackgroundMode xsi:nil="true" />
-    </MakeCommandTemplate>
-    <ShowMemoryUtilizationSummary>true</ShowMemoryUtilizationSummary>
+    <ProjectFile>phased_array_buzzer.vcxproj</ProjectFile>
+    <ParallelJobCount>0</ParallelJobCount>
+    <SuppressDirectoryChangeMessages>true</SuppressDirectoryChangeMessages>
   </Build>
   <Debug xsi:type="com.visualgdb.debug.embedded">
     <AdditionalStartupCommands />
@@ -80,6 +68,8 @@
           <string>mon reset init</string>
           <string>load</string>
         </StartupCommands>
+        <PreferredGDBPort>0</PreferredGDBPort>
+        <PreferredTelnetPort>0</PreferredTelnetPort>
       </Configuration>
     </DebugMethod>
     <AutoDetectRTOS>true</AutoDetectRTOS>
@@ -121,4 +111,5 @@
       <Enabled>false</Enabled>
     </CodeAnalyzerSettings>
   </CodeSense>
+  <BuildContextDirectory>VisualGDB\VisualGDBCache</BuildContextDirectory>
 </VisualGDBProjectSettings2>

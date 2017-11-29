@@ -15,7 +15,7 @@ static void fmcwBody()
 	static float frq = 20e3, inc = 2;
 
 	frq += inc;
-	if (frq >= 28e3 /*|| frq <= 20e3*/)
+	if (frq >= 24e3 /*|| frq <= 20e3*/)
 	{
 		frq = 20e3;
 	}

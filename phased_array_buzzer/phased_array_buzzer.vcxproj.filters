@@ -2,130 +2,58 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source files">
-      <UniqueIdentifier>{05bdd9bb-472c-4258-87af-04c9f165a025}</UniqueIdentifier>
+      <UniqueIdentifier>{c36fca7c-d9a0-4616-b8aa-22d40a701601}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Header files">
-      <UniqueIdentifier>{82faca6d-b4f9-45a3-a5d1-4f756938dd99}</UniqueIdentifier>
+      <UniqueIdentifier>{e7bc92fe-ca2b-4eb1-9381-d58adadbbf02}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Resource files">
-      <UniqueIdentifier>{af76e49e-dea5-4982-99c3-7b6e1d06fdaa}</UniqueIdentifier>
+      <UniqueIdentifier>{4a0b5712-bc8a-4d4e-862e-c501be001e7f}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Source files\mbed Files">
-      <UniqueIdentifier>{9a81ca20-8499-47bc-aabb-71f2e32f4836}</UniqueIdentifier>
+      <UniqueIdentifier>{37744637-5fd5-4b8b-9e93-79e894188f74}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\mbed Files\rtos Library">
-      <UniqueIdentifier>{6ffb1413-4c4c-4a69-9a55-0f93d4c79698}</UniqueIdentifier>
+    <Filter Include="Source files\mbed Files\drivers Library">
+      <UniqueIdentifier>{8ae6beab-c534-419b-bd1f-cdd8ada7a89a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\mbed Files">
-      <UniqueIdentifier>{9bcc2eea-2c3f-4c4f-9f8d-492861f8fcba}</UniqueIdentifier>
+      <UniqueIdentifier>{3aabcf87-62a9-49b7-a274-10ec8ca875fe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header files\mbed Files\rtos Library">
-      <UniqueIdentifier>{86304079-fc71-4f85-8314-a7b420298595}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Make files">
-      <UniqueIdentifier>{89436fe0-8419-493a-892f-15b33c21192f}</UniqueIdentifier>
+    <Filter Include="Header files\mbed Files\drivers Library">
+      <UniqueIdentifier>{d5080f9a-23f2-4ce2-bd37-e40054770520}</UniqueIdentifier>
     </Filter>
     <Filter Include="VisualGDB settings">
-      <UniqueIdentifier>{5929d88d-323b-46be-859a-36d540e60535}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\myDrivers">
-      <UniqueIdentifier>{fac1dc19-4511-470e-9e5d-48fe6e1f96e1}</UniqueIdentifier>
+      <UniqueIdentifier>{77516ccb-dcee-45f0-a6a0-744bbde03a93}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\myDrivers">
-      <UniqueIdentifier>{8d70d051-907a-4e3a-a862-9d19f1c5474b}</UniqueIdentifier>
+      <UniqueIdentifier>{a4b5b603-1650-417e-a3f3-b01fc7bebe98}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\dsp">
-      <UniqueIdentifier>{3659db7d-13ce-4b62-bd81-e2a12adcd9fa}</UniqueIdentifier>
+    <Filter Include="Header files\myDrivers">
+      <UniqueIdentifier>{87543144-1257-4e70-9192-e2342dd104a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp">
-      <UniqueIdentifier>{425dc854-9801-49bd-add8-5efbb8b8db66}</UniqueIdentifier>
+    <Filter Include="Source files\mbed Files\rtos Library">
+      <UniqueIdentifier>{f7732f6f-7fcd-476b-ad17-5fb7c22e2136}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\BasicMathFunctions">
-      <UniqueIdentifier>{19831687-688d-4236-9876-b93de7b7d61f}</UniqueIdentifier>
+    <Filter Include="Header files\mbed Files\rtos Library">
+      <UniqueIdentifier>{b174f042-4bc3-4797-8ead-7664d8ee14fc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\CommonTables">
-      <UniqueIdentifier>{5cc783d4-1022-499a-9637-355c37a86d7b}</UniqueIdentifier>
+    <Filter Include="Source files\mbed Files\DSP Library">
+      <UniqueIdentifier>{38701b4a-fd67-4bf5-9eb2-4e8b4bf7ac66}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\ComplexMathFunctions">
-      <UniqueIdentifier>{28600a16-9ce3-4e68-a4b7-32e40a201843}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\ControllerFunctions">
-      <UniqueIdentifier>{aade9e83-6cb6-4d30-8345-8599057081b5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\FastMathFunctions">
-      <UniqueIdentifier>{0966b133-ae34-44f9-9ec9-a395e884a3f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\FilteringFunctions">
-      <UniqueIdentifier>{eac30f6b-19bd-4e27-9800-ef1561bc65ca}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\MatrixFunctions">
-      <UniqueIdentifier>{bd6209f1-39f2-4d26-8283-6f8e08525da7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\StatisticsFunctions">
-      <UniqueIdentifier>{00111856-47aa-46e2-b140-97c1a4364687}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\SupportFunctions">
-      <UniqueIdentifier>{0a558757-19e7-4913-8dcf-25e49d0c80a0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\cmsis_dsp\TransformFunctions">
-      <UniqueIdentifier>{7d5ba874-c228-454e-bc1a-734a8aa7fbd9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source files\dsp\dsp">
-      <UniqueIdentifier>{ab31dcb3-4ebb-42a0-b667-5c7a7c5adb45}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp">
-      <UniqueIdentifier>{4c6fffe8-c7e4-4732-aff5-03d18ea5a012}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp">
-      <UniqueIdentifier>{c65ae3e7-0965-4a64-b08f-a25c85d36ef3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\BasicMathFunctions">
-      <UniqueIdentifier>{5f2de9f1-6675-4f5e-ae6a-c1e66cdd97eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\CommonTables">
-      <UniqueIdentifier>{8b48dc14-c9f0-4b12-8c9a-be79fe89a5af}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\ComplexMathFunctions">
-      <UniqueIdentifier>{fb7c952f-d574-4da8-89a6-e8277843978c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\ControllerFunctions">
-      <UniqueIdentifier>{171f53cc-05cb-4383-8f5e-c7d62566c8e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\FastMathFunctions">
-      <UniqueIdentifier>{c502cb0c-906f-4a97-81cf-d8270b8a1efa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\FilteringFunctions">
-      <UniqueIdentifier>{bab0f48a-dd14-43e4-acae-4a13917345a4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\MatrixFunctions">
-      <UniqueIdentifier>{18d15969-c356-49f6-accc-3b5333ae5a73}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\StatisticsFunctions">
-      <UniqueIdentifier>{a0ff3b9a-bc18-4268-8e2a-9d2aa39d6693}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\SupportFunctions">
-      <UniqueIdentifier>{88847321-b2df-4c3e-9035-a089883e1525}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\cmsis_dsp\TransformFunctions">
-      <UniqueIdentifier>{28897f5c-4975-4efb-b554-602b7c1609e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header files\dsp\dsp">
-      <UniqueIdentifier>{5d521822-8c19-4de0-97e5-fcea73ca4e44}</UniqueIdentifier>
+    <Filter Include="Header files\mbed Files\DSP Library">
+      <UniqueIdentifier>{b1d397a4-1398-4b6d-999a-6cf4db422450}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Makefile" />
-    <None Include="myDrivers\SpeakerArray.cd">
-      <Filter>Source files\myDrivers</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="mbed.mak">
+    <None Include="mbed.props">
       <Filter>Source files\mbed Files</Filter>
     </None>
+    <ClCompile Include="$(BSP_ROOT)\hal\mbed_flash_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_gpio.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
@@ -133,6 +61,9 @@
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_pinmap_common.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\hal\mbed_sleep_manager.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_ticker_api.c">
@@ -162,6 +93,12 @@
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_mem_trace.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\platform\mbed_mktime.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\platform\mbed_sdk_boot.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_semihost_api.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
@@ -174,64 +111,7 @@
     <ClCompile Include="$(BSP_ROOT)\stubs.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\AnalogIn.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\BusIn.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\BusInOut.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\BusOut.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\CAN.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\Ethernet.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\FlashIAP.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\I2C.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\I2CSlave.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptIn.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptManager.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\RawSerial.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\Serial.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\SerialBase.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\SPI.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\SPISlave.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\Ticker.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\Timeout.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\Timer.cpp">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\drivers\TimerEvent.cpp">
+    <ClCompile Include="$(BSP_ROOT)\platform\ATCmdParser.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\CallChain.cpp">
@@ -240,16 +120,22 @@
     <ClCompile Include="$(BSP_ROOT)\platform\FileBase.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\platform\FileHandle.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\FilePath.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\platform\FileSystemLike.cpp">
+    <ClCompile Include="$(BSP_ROOT)\platform\FileSystemHandle.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\LocalFileSystem.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_alloc_wrappers.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\platform\mbed_poll.cpp">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_retarget.cpp">
@@ -262,6 +148,9 @@
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\platform\Stream.cpp">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\analogout_api.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\can_api.c">
@@ -285,6 +174,9 @@
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\lp_ticker.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\mbed_overrides.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\pinmap.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
@@ -295,6 +187,9 @@
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\rtc_api.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\serial_api.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\sleep.c">
@@ -315,19 +210,19 @@
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\analogin_api.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\analogout_api.c">
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\analogout_device.c">
+      <Filter>Source files\mbed Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\flash_api.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\gpio_irq_device.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\mbed_overrides.c">
-      <Filter>Source files\mbed Files</Filter>
-    </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\pwmout_device.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\serial_api.c">
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\serial_device.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\spi_api.c">
@@ -585,109 +480,94 @@
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_ll_utils.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\cmsis_nvic.c">
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\system_stm32f7xx.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\PeripheralPins.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\system_stm32f7xx.c">
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\system_clock.c">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM\startup_stm32f769xx.s">
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM\startup_stm32f767xx.S">
       <Filter>Source files\mbed Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtos_idle.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\AnalogIn.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\HAL_CM.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\BusIn.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\RTX_Conf_CM.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\BusInOut.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_CMSIS.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\BusOut.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Event.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\CAN.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_List.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\Ethernet.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\FlashIAP.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\I2C.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Memory.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\I2CSlave.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptIn.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptManager.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Robin.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\RawSerial.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\Serial.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_System.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\SerialBase.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Task.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\SPI.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Time.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\SPISlave.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Timer.c">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\Ticker.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\Mutex.cpp">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\Timeout.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\RtosTimer.cpp">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\Timer.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\Semaphore.cpp">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\TimerEvent.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\Thread.cpp">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC\HAL_CM4.S">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
-    </ClCompile>
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC\SVC_Table.S">
-      <Filter>Source files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\drivers\UARTSerial.cpp">
+      <Filter>Source files\mbed Files\drivers Library</Filter>
     </ClCompile>
     <ClInclude Include="$(BSP_ROOT)\mbed.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\arm_common_tables.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\arm_const_structs.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\arm_math.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_ca9.h">
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_armv8mbl.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_caFunc.h">
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_armv8mml.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_caInstr.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_ca_mmu.h">
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_ca.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm0.h">
@@ -696,28 +576,22 @@
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm0plus.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm23.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm3.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm33.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm4.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm4_simd.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm7.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmFunc.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmInstr.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmSecureAccess.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmSimd.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_sc000.h">
@@ -726,97 +600,7 @@
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_sc300.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogIn.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\BusIn.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\BusInOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\BusOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\CAN.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalIn.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalInOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\Ethernet.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\FlashIAP.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\I2C.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\I2CSlave.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptIn.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptManager.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTicker.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimeout.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimer.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\PortIn.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\PortInOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\PortOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\PwmOut.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\RawSerial.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\Serial.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\SerialBase.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\SPI.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\SPISlave.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\Ticker.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\Timeout.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\Timer.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\drivers\TimerEvent.h">
+    <ClInclude Include="$(BSP_ROOT)\cmsis\tz_context.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\hal\analogin_api.h">
@@ -894,6 +678,9 @@
     <ClInclude Include="$(BSP_ROOT)\hal\storage_abstraction\Driver_Storage.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\ATCmdParser.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\Callback.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
@@ -906,7 +693,13 @@
     <ClInclude Include="$(BSP_ROOT)\platform\critical.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\CriticalSectionLock.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\CThunk.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\DeepSleepLock.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\DirHandle.h">
@@ -922,6 +715,9 @@
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\FilePath.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\FileSystemHandle.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\FileSystemLike.h">
@@ -954,6 +750,12 @@
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_mem_trace.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\mbed_mktime.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\mbed_poll.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_preprocessor.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
@@ -976,6 +778,9 @@
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_wait_api.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\platform\NonCopyable.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\platform\platform.h">
@@ -1008,10 +813,19 @@
     <ClInclude Include="$(BSP_ROOT)\platform\wait_api.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\cmsis\TARGET_CORTEX_M\cmsis_compiler.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\cmsis\TARGET_CORTEX_M\TOOLCHAIN_GCC\cmsis_gcc.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\gpio_object.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\mbed_rtx.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\nvic_addr.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\PeripheralPins.h">
@@ -1026,10 +840,10 @@
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\rtc_api_hal.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\USBHALHost_STM_144_64pins.h">
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\serial_api_hal.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\USBHAL_STM_144_64pins.h">
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\stm32_assert.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\can_device.h">
@@ -1051,6 +865,9 @@
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\pwmout_device.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\spi_device.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_hal.h">
@@ -1341,12 +1158,6 @@
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32_hal_legacy.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI\USBHALHost_STM_TARGET.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI\USBHAL_STM_TARGET.h">
-      <Filter>Header files\mbed Files</Filter>
-    </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\objects.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
@@ -1354,6 +1165,9 @@
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\cmsis_nvic.h">
+      <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\flash_data.h">
       <Filter>Header files\mbed Files</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\hal_tick.h">
@@ -1373,6 +1187,213 @@
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\PinNames.h">
       <Filter>Header files\mbed Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogIn.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\BusIn.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\BusInOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\BusOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\CAN.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalIn.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalInOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\Ethernet.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\FlashIAP.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\I2C.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\I2CSlave.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptIn.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptManager.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTicker.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimeout.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimer.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\PortIn.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\PortInOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\PortOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\PwmOut.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\RawSerial.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\Serial.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\SerialBase.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\SPI.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\SPISlave.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\Ticker.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\Timeout.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\Timer.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\TimerEvent.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <ClInclude Include="$(BSP_ROOT)\drivers\UARTSerial.h">
+      <Filter>Header files\mbed Files\drivers Library</Filter>
+    </ClInclude>
+    <None Include="phased_array_buzzer-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="phased_array_buzzer-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="mbed.xml">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <ClInclude Include="myDrivers\Frqer.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\myDrivers.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\myMath.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PeriodicSignal.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\PeriodOutArray.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\SpeakerArray.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="myDrivers\TicToc.h">
+      <Filter>Header files\myDrivers</Filter>
+    </ClInclude>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_boot.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtx_handlers.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx4\cmsis_os1.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\RTX_Config.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_delay.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_evflags.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_evr.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_kernel.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_lib.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_memory.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_mempool.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_msgqueue.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_mutex.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_semaphore.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_system.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_thread.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_timer.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rt_OsEventObserver.c">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\EventFlags.cpp">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\Mutex.cpp">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\RtosTimer.cpp">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\Semaphore.cpp">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\Thread.cpp">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtx_idle.cpp">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC\irq_cm4f.S">
+      <Filter>Source files\mbed Files\rtos Library</Filter>
+    </ClCompile>
+    <ClInclude Include="$(BSP_ROOT)\rtos\EventFlags.h">
+      <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
     <ClInclude Include="$(BSP_ROOT)\rtos\Mail.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
@@ -1401,945 +1422,886 @@
     <ClInclude Include="$(BSP_ROOT)\rtos\Thread.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\cmsis_os.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtos1_types.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\RTX_CM_lib.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtos_storage.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\RTX_Config.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtx_conf.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Event.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx4\cmsis_os.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_HAL_CM.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\cmsis_os2.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_List.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\core_cm.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\RTX_Config.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_evr.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Memory.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_lib.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_os.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.h">
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rt_OsEventObserver.h">
       <Filter>Header files\mbed Files\rtos Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Robin.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\Sine_f32.cpp">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_common_tables.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_const_structs.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f64.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f64.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_opt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_opt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_opt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f64.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_float.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_float.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q7.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_float.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\math_helper.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_bitreversal.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix8_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_f32.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q15.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q31.c">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_bitreversal2.S">
+      <Filter>Source files\mbed Files\DSP Library</Filter>
+    </ClCompile>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\dsp.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\FIR_f32.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_System.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\Sine_f32.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Task.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\arm_common_tables.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Time.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\arm_const_structs.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Timer.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\arm_math.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h">
-      <Filter>Header files\mbed Files\rtos Library</Filter>
-    </ClInclude>
-    <None Include="debug.mak">
-      <Filter>Make files</Filter>
-    </None>
-    <None Include="release.mak">
-      <Filter>Make files</Filter>
-    </None>
-    <None Include="phased_array_buzzer-Debug.vgdbsettings">
-      <Filter>VisualGDB settings</Filter>
-    </None>
-    <None Include="phased_array_buzzer-Release.vgdbsettings">
-      <Filter>VisualGDB settings</Filter>
-    </None>
-    <None Include="mbed.xml">
-      <Filter>VisualGDB settings</Filter>
-    </None>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\BasicMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_common_tables.c">
-      <Filter>Source files\dsp\cmsis_dsp\CommonTables</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_const_structs.c">
-      <Filter>Source files\dsp\cmsis_dsp\CommonTables</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ComplexMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\ControllerFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FastMathFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f64.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f64.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_opt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_opt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_opt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\FilteringFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f64.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\MatrixFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\StatisticsFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_float.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_float.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q7.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_float.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\math_helper.c">
-      <Filter>Source files\dsp\cmsis_dsp\SupportFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_bitreversal.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix8_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_f32.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q15.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q31.c">
-      <Filter>Source files\dsp\cmsis_dsp\TransformFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\Sine_f32.cpp">
-      <Filter>Source files\dsp\dsp</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\arm_common_tables.h">
-      <Filter>Header files\dsp\cmsis_dsp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\arm_const_structs.h">
-      <Filter>Header files\dsp\cmsis_dsp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\arm_math.h">
-      <Filter>Header files\dsp\cmsis_dsp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\math_helper.h">
-      <Filter>Header files\dsp\cmsis_dsp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\dsp.h">
-      <Filter>Header files\dsp\dsp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\FIR_f32.h">
-      <Filter>Header files\dsp\dsp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\Sine_f32.h">
-      <Filter>Header files\dsp\dsp</Filter>
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\math_helper.h">
+      <Filter>Header files\mbed Files\DSP Library</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myDrivers\myDrivers.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PeriodicSignal.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\Frqer.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\TicToc.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\PeriodOutArray.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\myMath.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
-    <ClInclude Include="myDrivers\SpeakerArray.h">
-      <Filter>Header files\myDrivers</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

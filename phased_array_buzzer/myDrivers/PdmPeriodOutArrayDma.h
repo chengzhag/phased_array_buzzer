@@ -61,8 +61,6 @@ namespace sky
 	class Dma2Timer1 :public DmaTimer
 	{
 	private:
-		static void _Error_Handler(char * file, int line) { while (1) {} }
-		static void _Error_Handler() { _Error_Handler(__FILE__, __LINE__); }
 
 	protected:
 		Dma2Timer1(float frq) 
@@ -89,13 +87,13 @@ namespace sky
 
 			if (HAL_TIM_Base_Init(htim) != HAL_OK)
 			{
-				_Error_Handler(__FILE__, __LINE__);
+				while (1);
 			}
 
 			sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
 			if (HAL_TIM_ConfigClockSource(htim, &sClockSourceConfig) != HAL_OK)
 			{
-				_Error_Handler(__FILE__, __LINE__);
+				while (1);
 			}
 
 			sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
@@ -103,7 +101,7 @@ namespace sky
 			sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
 			if (HAL_TIMEx_MasterConfigSynchronization(htim, &sMasterConfig) != HAL_OK)
 			{
-				_Error_Handler(__FILE__, __LINE__);
+				while (1);
 			}
 
 
@@ -121,7 +119,7 @@ namespace sky
 			hdma->Init.FIFOMode = DMA_FIFOMODE_DISABLE;
 			if (HAL_DMA_Init(hdma) != HAL_OK)
 			{
-				_Error_Handler(__FILE__, __LINE__);
+				while (1);
 			}
 
 			__HAL_LINKDMA(htim, hdma[TIM_DMA_ID_UPDATE], *hdma);

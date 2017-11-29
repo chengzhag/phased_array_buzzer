@@ -1,27 +1,25 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "phased_array_buzzer", "phased_array_buzzer\phased_array_buzzer.vcxproj", "{84342814-D7AE-404F-B8A3-00E41C6690BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "phased_array_buzzer", "phased_array_buzzer\phased_array_buzzer.vcxproj", "{DABB9F40-4910-47B0-9F94-F54ADE1E7E05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Release|x86 = Release|x86
+		Debug|VisualGDB = Debug|VisualGDB
+		Release|VisualGDB = Release|VisualGDB
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84342814-D7AE-404F-B8A3-00E41C6690BF}.Debug|x64.ActiveCfg = Debug|Win32
-		{84342814-D7AE-404F-B8A3-00E41C6690BF}.Debug|x86.ActiveCfg = Debug|Win32
-		{84342814-D7AE-404F-B8A3-00E41C6690BF}.Debug|x86.Build.0 = Debug|Win32
-		{84342814-D7AE-404F-B8A3-00E41C6690BF}.Release|x64.ActiveCfg = Release|Win32
-		{84342814-D7AE-404F-B8A3-00E41C6690BF}.Release|x86.ActiveCfg = Release|Win32
-		{84342814-D7AE-404F-B8A3-00E41C6690BF}.Release|x86.Build.0 = Release|Win32
+		{DABB9F40-4910-47B0-9F94-F54ADE1E7E05}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{DABB9F40-4910-47B0-9F94-F54ADE1E7E05}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{DABB9F40-4910-47B0-9F94-F54ADE1E7E05}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{DABB9F40-4910-47B0-9F94-F54ADE1E7E05}.Release|VisualGDB.Build.0 = Release|VisualGDB
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {88976D9C-E8AE-4095-A2A3-C6929C5601A6}
+		SolutionGuid = {6E63D86F-8090-49D7-A845-7F97641F22B7}
 	EndGlobalSection
 EndGlobal

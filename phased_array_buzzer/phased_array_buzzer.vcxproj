@@ -1,97 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
+    <ProjectConfiguration Include="Debug|VisualGDB">
       <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>VisualGDB</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
+    <ProjectConfiguration Include="Release|VisualGDB">
       <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>VisualGDB</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{84342814-D7AE-404F-B8A3-00E41C6690BF}</ProjectGuid>
+    <ProjectGuid>{DABB9F40-4910-47B0-9F94-F54ADE1E7E05}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.mbed</BSP_ID>
+    <BSP_VERSION>5.6.3r2</BSP_VERSION>
+    <InPlaceBSPSubdir />
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Makefile</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)mbed.props</MCUPropertyListFile>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Makefile</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)mbed.props</MCUPropertyListFile>
   </PropertyGroup>
-  <PropertyGroup Label="VisualGDBPackageDefinitions">
-    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
-    <ToolchainVersion>6.2.0/7.12/r4</ToolchainVersion>
-    <BSP_ID>com.sysprogs.arm.mbed</BSP_ID>
-    <BSP_VERSION>5.4.2R2</BSP_VERSION>
-  </PropertyGroup>
-  <ImportGroup Label="VisualGDBFindComponents">
-    <Import Project="$(LOCALAPPDATA)\VisualGDB\FindComponents.props" />
-  </ImportGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeIncludeSearchPath>$(BSP_ROOT);$(BSP_ROOT)\cmsis;$(BSP_ROOT)\cmsis\TOOLCHAIN_GCC;$(BSP_ROOT)\DeviceDefinitions;$(BSP_ROOT)\drivers;$(BSP_ROOT)\hal;$(BSP_ROOT)\hal\storage_abstraction;$(BSP_ROOT)\platform;$(BSP_ROOT)\targets;$(BSP_ROOT)\targets\TARGET_STM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI;$(BSP_ROOT)\rtos;$(BSP_ROOT)\rtos\rtx;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\arm-eabi\thumb\cortex_m7;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\backward;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include-fixed;$(TOOLCHAIN_ROOT)\arm-eabi\sys-include;$(TOOLCHAIN_ROOT)\arm-eabi\include;myDrivers;$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp;$(BSP_ROOT)\features\unsupported\dsp\dsp;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
-    <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
-    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
-    <NMakeOutput>$(ProjectDir)phased_array_buzzer-Debug.vgdbsettings</NMakeOutput>
-    <IncludePath />
-    <ReferencePath />
-    <LibraryPath />
-    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Debug;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r2</ToolchainVersion>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <NMakeIncludeSearchPath>$(BSP_ROOT);$(BSP_ROOT)\cmsis;$(BSP_ROOT)\cmsis\TOOLCHAIN_GCC;$(BSP_ROOT)\DeviceDefinitions;$(BSP_ROOT)\drivers;$(BSP_ROOT)\hal;$(BSP_ROOT)\hal\storage_abstraction;$(BSP_ROOT)\platform;$(BSP_ROOT)\targets;$(BSP_ROOT)\targets\TARGET_STM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM;$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\arm-eabi\thumb\cortex_m7;$(TOOLCHAIN_ROOT)\arm-eabi\include\c++\6.2.0\backward;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include;$(TOOLCHAIN_ROOT)\lib\gcc\arm-eabi\6.2.0\include-fixed;$(TOOLCHAIN_ROOT)\arm-eabi\sys-include;$(TOOLCHAIN_ROOT)\arm-eabi\include;$(BSP_ROOT)\rtos;$(BSP_ROOT)\rtos\rtx;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7;$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC;$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp;$(BSP_ROOT)\features\unsupported\dsp\dsp;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
-    <NMakeForcedIncludes>$(ProjectDir)\gcc_Release.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
-    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
-    <NMakeOutput>$(ProjectDir)phased_array_buzzer-Release.vgdbsettings</NMakeOutput>
-    <IncludePath />
-    <ReferencePath />
-    <LibraryPath />
-    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Release;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r2</ToolchainVersion>
   </PropertyGroup>
-  <ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <CPPLanguageStandard>GNUPP14</CPPLanguageStandard>
+      <AdditionalIncludeDirectories>myDrivers;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LinkerScript />
+      <AdditionalOptions />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <CPPLanguageStandard>GNUPP14</CPPLanguageStandard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <ItemGroup />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClInclude Include="myDrivers\SpeakerArray.h" />
-    <ClInclude Include="myDrivers\Frqer.h" />
-    <ClInclude Include="myDrivers\myDrivers.h" />
-    <ClInclude Include="myDrivers\myMath.h" />
-    <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h" />
-    <ClInclude Include="myDrivers\PeriodicSignal.h" />
-    <ClInclude Include="myDrivers\PeriodOutArray.h" />
-    <ClInclude Include="myDrivers\TicToc.h" />
-    <None Include="mbed.mak" />
+    <None Include="mbed.props" />
+    <ClCompile Include="$(BSP_ROOT)\hal\mbed_flash_api.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_gpio.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_lp_ticker_api.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_pinmap_common.c" />
+    <ClCompile Include="$(BSP_ROOT)\hal\mbed_sleep_manager.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_ticker_api.c" />
     <ClCompile Include="$(BSP_ROOT)\hal\mbed_us_ticker_api.c" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_application.c" />
@@ -101,40 +82,26 @@
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_error.c" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_interface.c" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_mem_trace.c" />
+    <ClCompile Include="$(BSP_ROOT)\platform\mbed_mktime.c" />
+    <ClCompile Include="$(BSP_ROOT)\platform\mbed_sdk_boot.c" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_semihost_api.c" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_stats.c" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_wait_api_no_rtos.c" />
     <ClCompile Include="$(BSP_ROOT)\stubs.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\AnalogIn.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\BusIn.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\BusInOut.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\BusOut.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\CAN.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\Ethernet.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\FlashIAP.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\I2C.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\I2CSlave.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptIn.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptManager.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\RawSerial.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\Serial.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\SerialBase.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\SPI.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\SPISlave.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\Ticker.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\Timeout.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\Timer.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\drivers\TimerEvent.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\platform\ATCmdParser.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\CallChain.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\FileBase.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\platform\FileHandle.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\FilePath.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\platform\FileSystemLike.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\platform\FileSystemHandle.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\LocalFileSystem.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_alloc_wrappers.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\platform\mbed_poll.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_retarget.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_rtc_time.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\mbed_wait_api_rtos.cpp" />
     <ClCompile Include="$(BSP_ROOT)\platform\Stream.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\analogout_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\can_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\gpio_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\gpio_irq_api.c" />
@@ -142,21 +109,23 @@
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\hal_tick_32b.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\i2c_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\lp_ticker.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\mbed_overrides.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\pinmap.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\port_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\pwmout_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\rtc_api.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\serial_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\sleep.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\stm_spi_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\trng_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\us_ticker_16b.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\us_ticker_32b.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\analogin_api.c" />
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\analogout_api.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\analogout_device.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\flash_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\gpio_irq_device.c" />
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\mbed_overrides.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\pwmout_device.c" />
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\serial_api.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\serial_device.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\spi_api.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_hal.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_hal_adc.c" />
@@ -242,84 +211,47 @@
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_ll_usart.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_ll_usb.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_ll_utils.c" />
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\cmsis_nvic.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\system_stm32f7xx.c" />
     <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\PeripheralPins.c" />
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\system_stm32f7xx.c" />
-    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM\startup_stm32f769xx.s" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtos_idle.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\HAL_CM.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\RTX_Conf_CM.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_CMSIS.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Event.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_List.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Memory.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Robin.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_System.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Task.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Time.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Timer.c" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\Mutex.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\RtosTimer.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\Semaphore.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\Thread.cpp" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC\HAL_CM4.S" />
-    <ClCompile Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC\SVC_Table.S" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\system_clock.c" />
+    <ClCompile Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\TOOLCHAIN_GCC_ARM\startup_stm32f767xx.S" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\AnalogIn.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\BusIn.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\BusInOut.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\BusOut.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\CAN.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\Ethernet.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\FlashIAP.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\I2C.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\I2CSlave.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptIn.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\InterruptManager.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\RawSerial.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\Serial.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\SerialBase.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\SPI.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\SPISlave.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\Ticker.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\Timeout.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\Timer.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\TimerEvent.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\drivers\UARTSerial.cpp" />
     <ClInclude Include="$(BSP_ROOT)\mbed.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\arm_common_tables.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\arm_const_structs.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\arm_math.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_ca9.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_caFunc.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_caInstr.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_ca_mmu.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_armv8mbl.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_armv8mml.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_ca.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm0.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm0plus.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm23.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm3.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm33.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm4.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm4_simd.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cm7.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmFunc.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmInstr.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmSecureAccess.h" />
-    <ClInclude Include="$(BSP_ROOT)\cmsis\core_cmSimd.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_sc000.h" />
     <ClInclude Include="$(BSP_ROOT)\cmsis\core_sc300.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogIn.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\BusIn.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\BusInOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\BusOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\CAN.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalIn.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalInOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\Ethernet.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\FlashIAP.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\I2C.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\I2CSlave.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptIn.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptManager.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTicker.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimeout.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimer.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\PortIn.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\PortInOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\PortOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\PwmOut.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\RawSerial.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\Serial.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\SerialBase.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\SPI.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\SPISlave.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\Ticker.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\Timeout.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\Timer.h" />
-    <ClInclude Include="$(BSP_ROOT)\drivers\TimerEvent.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\tz_context.h" />
     <ClInclude Include="$(BSP_ROOT)\hal\analogin_api.h" />
     <ClInclude Include="$(BSP_ROOT)\hal\analogout_api.h" />
     <ClInclude Include="$(BSP_ROOT)\hal\buffer.h" />
@@ -345,16 +277,20 @@
     <ClInclude Include="$(BSP_ROOT)\hal\us_ticker_api.h" />
     <ClInclude Include="$(BSP_ROOT)\hal\storage_abstraction\Driver_Common.h" />
     <ClInclude Include="$(BSP_ROOT)\hal\storage_abstraction\Driver_Storage.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\ATCmdParser.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\Callback.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\CallChain.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\CircularBuffer.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\critical.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\CriticalSectionLock.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\CThunk.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\DeepSleepLock.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\DirHandle.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\FileBase.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\FileHandle.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\FileLike.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\FilePath.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\FileSystemHandle.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\FileSystemLike.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\FunctionPointer.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\LocalFileSystem.h" />
@@ -365,6 +301,8 @@
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_error.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_interface.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_mem_trace.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\mbed_mktime.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\mbed_poll.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_preprocessor.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_retarget.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_rtc_time.h" />
@@ -373,6 +311,7 @@
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_stats.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_toolchain.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\mbed_wait_api.h" />
+    <ClInclude Include="$(BSP_ROOT)\platform\NonCopyable.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\platform.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\PlatformMutex.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\rtc_time.h" />
@@ -383,14 +322,17 @@
     <ClInclude Include="$(BSP_ROOT)\platform\toolchain.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\Transaction.h" />
     <ClInclude Include="$(BSP_ROOT)\platform\wait_api.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\TARGET_CORTEX_M\cmsis_compiler.h" />
+    <ClInclude Include="$(BSP_ROOT)\cmsis\TARGET_CORTEX_M\TOOLCHAIN_GCC\cmsis_gcc.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\gpio_object.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\mbed_rtx.h" />
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\nvic_addr.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\PeripheralPins.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\PinNamesTypes.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\PortNames.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\rtc_api_hal.h" />
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\USBHALHost_STM_144_64pins.h" />
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\USBHAL_STM_144_64pins.h" />
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\serial_api_hal.h" />
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\stm32_assert.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\can_device.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\common_objects.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device.h" />
@@ -398,6 +340,7 @@
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\i2c_device.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\pin_device.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\pwmout_device.h" />
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\spi_device.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_hal.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_hal_adc.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_hal_adc_ex.h" />
@@ -494,17 +437,85 @@
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_ll_utils.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32f7xx_ll_wwdg.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\device\stm32_hal_legacy.h" />
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI\USBHALHost_STM_TARGET.h" />
-    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_NUCLEO_F767ZI\USBHAL_STM_TARGET.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\objects.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\cmsis.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\cmsis_nvic.h" />
+    <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\flash_data.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\hal_tick.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\stm32f767xx.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\stm32f7xx.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\device\system_stm32f7xx.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\PeripheralNames.h" />
     <ClInclude Include="$(BSP_ROOT)\targets\TARGET_STM\TARGET_STM32F7\TARGET_STM32F767xI\TARGET_NUCLEO_F767ZI\PinNames.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogIn.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\AnalogOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\BusIn.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\BusInOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\BusOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\CAN.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalIn.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalInOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\DigitalOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\Ethernet.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\FlashIAP.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\I2C.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\I2CSlave.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptIn.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\InterruptManager.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTicker.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimeout.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\LowPowerTimer.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\PortIn.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\PortInOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\PortOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\PwmOut.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\RawSerial.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\Serial.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\SerialBase.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\SPI.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\SPISlave.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\Ticker.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\Timeout.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\Timer.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\TimerEvent.h" />
+    <ClInclude Include="$(BSP_ROOT)\drivers\UARTSerial.h" />
+    <None Include="phased_array_buzzer-Debug.vgdbsettings" />
+    <None Include="phased_array_buzzer-Release.vgdbsettings" />
+    <None Include="mbed.xml" />
+    <ClInclude Include="myDrivers\Frqer.h" />
+    <ClInclude Include="myDrivers\myDrivers.h" />
+    <ClInclude Include="myDrivers\myMath.h" />
+    <ClInclude Include="myDrivers\PdmPeriodOutArrayDma.h" />
+    <ClInclude Include="myDrivers\PeriodicSignal.h" />
+    <ClInclude Include="myDrivers\PeriodOutArray.h" />
+    <ClInclude Include="myDrivers\SpeakerArray.h" />
+    <ClInclude Include="myDrivers\TicToc.h" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_boot.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtx_handlers.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx4\cmsis_os1.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\RTX_Config.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_delay.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_evflags.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_evr.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_kernel.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_lib.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_memory.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_mempool.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_msgqueue.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_mutex.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_semaphore.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_system.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_thread.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_timer.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rt_OsEventObserver.c" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\EventFlags.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\Mutex.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\RtosTimer.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\Semaphore.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\Thread.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtx_idle.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC\irq_cm4f.S" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\EventFlags.h" />
     <ClInclude Include="$(BSP_ROOT)\rtos\Mail.h" />
     <ClInclude Include="$(BSP_ROOT)\rtos\MemoryPool.h" />
     <ClInclude Include="$(BSP_ROOT)\rtos\Mutex.h" />
@@ -514,310 +525,297 @@
     <ClInclude Include="$(BSP_ROOT)\rtos\rtos_idle.h" />
     <ClInclude Include="$(BSP_ROOT)\rtos\Semaphore.h" />
     <ClInclude Include="$(BSP_ROOT)\rtos\Thread.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\cmsis_os.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\RTX_CM_lib.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\RTX_Config.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Event.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_HAL_CM.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_List.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Memory.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Robin.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_System.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Task.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Time.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_Timer.h" />
-    <ClInclude Include="$(BSP_ROOT)\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h" />
-    <None Include="Makefile" />
-    <None Include="debug.mak" />
-    <None Include="myDrivers\SpeakerArray.cd" />
-    <None Include="release.mak" />
-    <None Include="phased_array_buzzer-Debug.vgdbsettings" />
-    <None Include="phased_array_buzzer-Release.vgdbsettings" />
-    <None Include="mbed.xml" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_common_tables.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_const_structs.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f64.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f64.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_opt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_opt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_opt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f64.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_float.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_float.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q7.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_float.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\SupportFunctions\math_helper.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_bitreversal.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix8_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_f32.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q15.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q31.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\Sine_f32.cpp" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\arm_common_tables.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\arm_const_structs.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\arm_math.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\cmsis_dsp\math_helper.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\dsp.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\FIR_f32.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.mbed\features\unsupported\dsp\dsp\Sine_f32.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtos1_types.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtos_storage.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\mbed_rtx_conf.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx4\cmsis_os.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\cmsis_os2.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\core_cm.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\RTX_Config.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_evr.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_lib.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rtx_os.h" />
+    <ClInclude Include="$(BSP_ROOT)\rtos\TARGET_CORTEX\rtx5\rt_OsEventObserver.h" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\Sine_f32.cpp" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_abs_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_add_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_dot_prod_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_mult_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_negate_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_offset_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_scale_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_shift_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\BasicMathFunctions\arm_sub_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_common_tables.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\CommonTables\arm_const_structs.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_conj_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_dot_prod_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mag_squared_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_cmplx_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ComplexMathFunctions\arm_cmplx_mult_real_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_pid_reset_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\ControllerFunctions\arm_sin_cos_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_cos_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sin_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FastMathFunctions\arm_sqrt_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_32x64_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df1_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_f64.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_df2T_init_f64.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_biquad_cascade_stereo_df2T_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_opt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_opt_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_opt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_opt_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_partial_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_conv_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_opt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_opt_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_correlate_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_decimate_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_init_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_interpolate_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_lattice_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_init_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_fir_sparse_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_iir_lattice_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_norm_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\FilteringFunctions\arm_lms_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_add_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_cmplx_mult_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_inverse_f64.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_fast_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_mult_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_scale_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_sub_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\MatrixFunctions\arm_mat_trans_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_max_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_mean_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_min_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_power_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_rms_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_std_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\StatisticsFunctions\arm_var_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_copy_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_fill_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_float_to_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_float.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q15_to_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_float.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q31_to_q7.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_float.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\arm_q7_to_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\SupportFunctions\math_helper.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_bitreversal.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix2_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix4_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_cfft_radix8_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_dct4_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_fast_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_f32.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_init_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q15.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_rfft_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\TransformFunctions\arm_bitreversal2.S" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\dsp.h" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\FIR_f32.h" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\dsp\Sine_f32.h" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\arm_common_tables.h" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\arm_const_structs.h" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\arm_math.h" />
+    <ClInclude Include="$(BSP_ROOT)\features\unsupported\dsp\cmsis_dsp\math_helper.h" />
   </ItemGroup>
 </Project>
